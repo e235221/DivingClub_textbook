@@ -1,0 +1,1140 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>12. トラブルの予防と処置(作成途中) &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '12toraburu';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13. ストレスとパニック(作成中)" href="13sutoresu.html" />
+    <link rel="prev" title="11. 薬品とダイビング" href="11yakuhinn.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/univ_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="_static/univ_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to  Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1kisoku.html">1.部内部則</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="2menkyo.html">2.免許制度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3kizai.html">3.器材(作成する)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4skin.html">4. スキンダイビング</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5buddy.html">5. バディシステム</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="6env.html">6. 環境学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7point.html">7. ポイントについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8kagaku.html">8. 潜水の科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9seiri.html">9.潜水の生理_figadd / なんかおかしい</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10log.html">10. ログ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11yakuhinn.html">11. 薬品とダイビング</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">12. トラブルの予防と処置(作成途中)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13sutoresu.html">13. ストレスとパニック(作成中)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14navi.html">14. ナビゲーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15rennshuu.html">15. 練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16night.html">16. ナイトダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17josei.html">17. 女性とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18kamera.html">18. カメラ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F12toraburu.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/12toraburu.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>12. トラブルの予防と処置(作成途中)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">12. トラブルの予防と処置(作成途中)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a">A. 海況によるトラブル</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">流れによるトラブル</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1. 基本的な予防と処置</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2. リップカレント(離岸流)に対する予防と対処</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3. ロングジョアカレント(沿岸流)に対する予防と処置</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">波によるトラブル</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex">1. 高波でExが困難</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2. 波にのまれた</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">器材のトラブル</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1.マスクが曇ったとき</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2. マスクに水が入る</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3. シュノーケルに水が入る</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4. フィンのストラップが切れたとき</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b">B. 心身のトラブル</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">1. 波酔い</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">1-1. 症状</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2. 耳が痛くなった，耳抜きができない</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2-2. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">3. 鼻血が出たとき</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">3-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">3-2. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">4. 寒くなったとき</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">4-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">4-2. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">5. 筋肉が攣った</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">5-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">5-2. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">6. 疲れている</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">6-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">6-2. 予防と対処</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#c">C. 水中拘束</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1">C-1. 釣り針・漁網が絡まったとき</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1-1">C-1.1 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-2">C-2. 岩や珊瑚に引っかかったとき</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-2-1">C-2.1. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1-3">C-1.3.　その他のナイフの使い方</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>12. トラブルの予防と処置(作成途中)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>目次</p></li>
+</ul>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="a">
+<h1>A. 海況によるトラブル<a class="headerlink" href="#a" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>海況によるトラブルは，直接身の危険に関わります。まずは落ち着いてよく海況を把握し，できるだけ早くトラブルから脱出することが大切です。対処・予防法を覚えることは大切ですが，海に入る前にしっかりと海況チェックを行ってトラブルを未然に防ぐことが必要です。</p>
+</div></blockquote>
+<section id="id2">
+<h2>流れによるトラブル<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>強い流れに巻き込まれたり，沖に流された場合</p>
+<section id="id3">
+<h3>1. 基本的な予防と処置<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<div class="notes admonition">
+<p class="admonition-title">予防と対処</p>
+<p>予防：(入る前に確認)</p>
+<ul class="simple">
+<li><p>干潮と満潮の時刻，入るポイントの特徴・地形をきちんと把握しておく。</p>
+<ul>
+<li><p>ex.干潮満潮で流れの向きが変わる，浅瀬，リーフエッジでは波がたちやすい。リップカレント・ロングショア・カレントが起こる。</p></li>
+</ul>
+</li>
+<li><p>海況チェックの際に，流れの有無・方向・強さなどを確認して，強いな流れがある場所は，そこを避ける。もしくは海に入らない。</p></li>
+<li><p>海況は常に変化するので，海に入っている間も十分注意し，危険だと感じたらすぐに上がる。</p></li>
+<li><p>時々，陸や自分のいる場所の地形などを見て，自分の位置を確認する。</p></li>
+<li><p>練習で泳力をつける。</p></li>
+</ul>
+<p>処置：</p>
+<ul class="simple">
+<li><p>慌てず，まずは落ち着く。</p></li>
+<li><p>自分の位置・地形・流れを考慮してEx.の手段・場所を決める。</p></li>
+<li><p>浅いところならば，岩をつかんだり，砂地ならばナイフを刺したりして，海底を這うように進む(危険生物に注意)</p></li>
+<li><p>歩ける水深なら，フィンを脱いで歩く</p></li>
+<li><p>ウェイトなど重い器材を捨てても良い</p></li>
+<li><p>周囲に人がいるならば助けを求める。</p></li>
+<li><p>陸まで辿り着けないと思ったら，そのまま救助を待つ。（最終手段）</p></li>
+</ul>
+</div>
+</section>
+<section id="id4">
+<h3>2. リップカレント(離岸流)に対する予防と対処<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>海況チェックの際に，リップカレントが発生していないか確かめる。発生している場合は，できるだけ避けるようにコースを取る。</p></li>
+<li><p>リップカレントの発生しやすい地形（強水路，岬，入江）・特徴（ゴミや泡が集まっている，周囲と違って白波が立たない）を把握しておく。</p></li>
+<li><p>リップカレントが発生するポイントでは，満潮から干潮へ向かう時間帯のExにはとくに注意する。</p>
+<ul>
+<li><p>ex. 米須，備瀬，辺戸岬，真栄田，残波</p></li>
+</ul>
+</li>
+</ul>
+<p>処置：</p>
+<ol class="arabic simple">
+<li><p>流されていることに気づいた時点で，流れと垂直に泳いで脱出する</p></li>
+<li><p>流れが弱い場合，流れに逆らって泳いで脱出する。</p></li>
+<li><p>浅い場合，フィンを脱いで歩いて脱出する。</p></li>
+<li><p>ウェイトを捨てて，流れがなくなるところまで流されていき，そこから泳いで戻ってくる。（最終手段：どこに流されるか分からない上，そのまま外洋性の流れにつながる可能性もあり，非常に危険）</p></li>
+</ol>
+</aside>
+<p><img alt="スクリーンショット 2024-04-25 21.04.18.png" src="12%20%E3%83%88%E3%83%A9%E3%83%95%E3%82%99%E3%83%AB%E3%81%AE%E4%BA%88%E9%98%B2%E3%81%A8%E5%87%A6%E7%BD%AE(%E4%BD%9C%E6%88%90%E9%80%94%E4%B8%AD)%20572a4aa45ea1451c9a0bb63b24742637/%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588_2024-04-25_21.04.18.png" /></p>
+</section>
+<section id="id5">
+<h3>3. ロングジョアカレント(沿岸流)に対する予防と処置<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<p>海況チェックの際に，ロングショアカレントが発生していないか確かめる。発生している場合は，それを考慮にいれたコース設定をする。</p>
+<p>処置：</p>
+<ul class="simple">
+<li><p>EnとExの場所を変える。(流れに沿ってEnExし陸を歩く)</p></li>
+<li><p>行きに疲れに逆らってき、帰りに流れに乗る。</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="id6">
+<h2>波によるトラブル<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="ex">
+<h3>1. 高波でExが困難<a class="headerlink" href="#ex" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防</p>
+<ul class="simple">
+<li><p>潮汐・干潮時刻・波の変化を考慮に入れたコース設定をする。</p></li>
+<li><p>あまりに波が高いときは海に入らない。</p></li>
+</ul>
+<p>処置：</p>
+<ul class="simple">
+<li><p>波がないところからExする。</p></li>
+</ul>
+<p>（全く波が立っていない場所は，リップカレントが発生している場合があるので，避ける）</p>
+<ul class="simple">
+<li><p>危険生物や岩・海底に体をぶつけて怪我をしないように注意する。</p></li>
+<li><p>引き波のときは留まり，寄せ波のときに進む。歩くときには，体を横にして波とぶつかる面積を小さくする。</p></li>
+<li><p>周期的に波が弱いときにExする。</p></li>
+</ul>
+<p>（黒潮とは無関係に大波がくることもあるので注意）</p>
+<ul class="simple">
+<li><p>スキューバの際は，レギュレータをくわえたままExする。</p></li>
+</ul>
+</aside>
+</section>
+<section id="id7">
+<h3>2. 波にのまれた<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>波の高いところ，白波の立っているところはできるだけ避ける。</p></li>
+</ul>
+<p>処置：</p>
+<ul class="simple">
+<li><p>視界確保のため，マスクが流されないように両手で前後を押さえる（鼻から息を吸ってマスクを装着させると外れにくい）</p></li>
+<li><p>上下左右がわからなくなったら，手足はできるだけ丸めて頭部を守る。</p></li>
+<li><p>水深の深いところは波がたちにくいので，そういう場所に移動する。</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="id8">
+<h2>器材のトラブル<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>器材のトラブルはパニックの原因になることがあります。しかし、着ち着いて対処・予防すればパニックになる種率を減らすことができるので、よく読んで対処・予防法をマ スターしましょう。</p>
+</div></blockquote>
+<section id="id9">
+<h3>1.マスクが曇ったとき<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>マスクをつける前に曇り止めを念入りにする</p></li>
+</ul>
+<p>対処：</p>
+<ul class="simple">
+<li><p>曇り止めをし直す</p></li>
+<li><p>マスクに水を入れてマスククリアをする。</p></li>
+</ul>
+<p>※新品のレンズを使うときは，中性洗剤を内側に入れて一晩置いておく。</p>
+</aside>
+</section>
+<section id="id10">
+<h3>2. マスクに水が入る<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>マスクのストラップを調節する。</p></li>
+<li><p>前髪が挟まっていないか確認する(自分で分からないときはバディに見てもらう)</p></li>
+<li><p>水中で鼻から息をはかない</p></li>
+</ul>
+<p>※ オプチの人など分解した後でも水が入りやすいので注意</p>
+<p>対処：</p>
+<ul class="simple">
+<li><p>マスククリア(スキン参照)する</p></li>
+<li><p>マスクを外して付け直してみる</p></li>
+</ul>
+<p>※ マスクの位置が上すぎたり、下すぎたりすると水が入りやすいので注意!</p>
+</aside>
+</section>
+<section id="id11">
+<h3>3. シュノーケルに水が入る<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>パイプとマウスピースの部分がきちんとはまっているか確認する。</p></li>
+<li><p>シュノーケルの先端が水中に入ったまま泳がない。</p></li>
+<li><p>弁がついているものは，弁に何も挟んでないか確認する</p></li>
+</ul>
+<p>対処：</p>
+<ul class="simple">
+<li><p>シュノーケルクリア(スキン参照)する</p></li>
+<li><p>スキンのときは，シュノーケルを口から離して水を出しても良い。</p></li>
+<li><p>弁付きのものは，小石などが挟まっていると弁から水が入ってきてしまうためこれを取り除く。(慌てると水が入りやすいので注意)</p></li>
+</ul>
+</aside>
+</section>
+<section id="id12">
+<h3>4. フィンのストラップが切れたとき<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>ストラップが切れそうなら交換しておく。</p></li>
+</ul>
+<p>※ストラップのみの購入可能</p>
+<p>対処：</p>
+<ul class="simple">
+<li><p>長いほうのストラップをずらして使う。</p></li>
+</ul>
+</aside>
+<p><img alt="フィンのトラブル.jpg" src="12%20%E3%83%88%E3%83%A9%E3%83%95%E3%82%99%E3%83%AB%E3%81%AE%E4%BA%88%E9%98%B2%E3%81%A8%E5%87%A6%E7%BD%AE(%E4%BD%9C%E6%88%90%E9%80%94%E4%B8%AD)%20572a4aa45ea1451c9a0bb63b24742637/%25E3%2583%2595%25E3%2582%25A3%25E3%2583%25B3%25E3%2581%25AE%25E3%2583%2588%25E3%2583%25A9%25E3%2583%2595%25E3%2582%2599%25E3%2583%25AB.jpg" /></p>
+<p>※1. フィンのストラップが短いときは，片フィンで泳ぐか，ストラップを外した状態で泳ぐ(意外に外れにくいい)。
+※2. 夜にもバックルなども壊れやすい</p>
+<p>※3. 切れたらすぐに新しいものを買う。</p>
+<p>以上のように，器材のトラブルは事前にチェックすることで防ぐことができます。普段から自分の器材を大切に扱い，しっかりと管理しましょう。</p>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="b">
+<h1>B. 心身のトラブル<a class="headerlink" href="#b" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>★はじめに</p>
+<p>心身のトラブルは器材のトラブルと同様にパニックの原因になります。また，器材のトラブルよりも起こり易く、トラブルの解消に時間がかかります。</p>
+</div></blockquote>
+<section id="id13">
+<h2>1. 波酔い<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<section id="id14">
+<h3>1-1. 症状<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>乗り物酔いと同じような症状です。最初は生あくびなどの症状からめまい、次第に冷や汗，動悸、頭痛、体の痺れ、吐き気といった症状を催します。さらに悪化した場合、嘔吐が起きます。
+※周りなどで、視界が悪いと静いやすいので注意が必要です。 (ナイトでもなりやすいので注意)</p>
+<p>※フードをつけると波酔いになりやすいので注意が必要です。</p>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" />
+<p>予防と対処</p>
+<p>予防：</p>
+<ul class="simple">
+<li><p>前の晩は早く寝て、体調を並える。</p></li>
+<li><p>ダイビング直前のご飯は控えめにし、水分を多めにとる。</p></li>
+<li><p>オプチカルレンズ使用者の場合、度が自分に合っているか確かめる。</p></li>
+</ul>
+<p>※酔い止めを飲んでダイビングしてはいけません。(薬品とダイビング参照)</p>
+<p>対処:</p>
+<ul class="simple">
+<li><p>楽な姿勢で機になる。</p></li>
+<li><p>違くの一点を眺める。</p></li>
+<li><p>海況が良ければマスクを外して鼻で深呼吸する。</p></li>
+<li><p>ウエイトを外し、ジャケットの前を開けて腹部、胸部の圧迫を和らげる。</p></li>
+<li><p>立ち泳ぎをやると酷くなるのでやらない。</p></li>
+<li><p>吐くことや、泳ぐことで楽になる場合もあるが、酷いようならExする。</p></li>
+<li><p>波酔いしたら遠慮せずバディに伝える。</p></li>
+</ul>
+</aside>
+<p>「酔い止めなしなんてひど~い!私ってダイビング無理なの??」 大丈夫です。清に慣れると酔わなくなることもあるので、波酔いに関しては心配しすぎないようにしましょう。そもそもは最高に楽しい場所です。酔いなんて吹き飛んでしまいますよ。それでも酔ってしまったらバディに相談しましょう。</p>
+</section>
+</section>
+<section id="id15">
+<h2>2. 耳が痛くなった，耳抜きができない<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<aside>
+❗ 知っておこう
+<p>潜水中にうまく耳抜きが行えなかったときに，水圧で鼓膜が内側に圧迫されます。この状態で無理に潜水を続けたり，強く耳抜きすると鼓膜を傷めたり破れたりします。非常に身近で，起こりやすいトラブルです。(潜水の生理参照)</p>
+<p>耳は聴覚としての機能だけでなく，平衡感覚の機能も備わっています。大事な器官を失わないようにこれから知識をつけましょう。</p>
+</aside>
+<section id="id16">
+<h3>2-1. 症状<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>鼓膜にダメージを受けたことにより，耳鳴りや耳痛，聴力の低下を起こしめまいが生じます。平衡感覚を失うほど重症なときは，歩行はもちろん，立つことも困難になり，吐き気もあるでしょう。すぐに症状がが出るのではないため、迅速な治療ができないこともあります。</p>
+</section>
+<section id="id17">
+<h3>2-2. 予防と対処<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<p>**「こまめに耳抜きをする!」**これが最大の予防法です。
+つまり、耳抜きができる体調づくりを考えていきましょう。</p>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防：
+<ul class="simple">
+<li><p>疲れや 不足、鼻づまりでも耳抜きがしにくくなるので前日はよく寝る。</p></li>
+<li><p>潜る前に一度耳抜きを行い、着ってからも耳が痛くなる前にこまめに耳抜きをする。</p></li>
+<li><p>耳が抜けないようであれは無理せずそれ以上 潜らない。</p></li>
+<li><p>マスクのストラップが耳にかかってないか、きつくないかを確認する。</p></li>
+<li><p>海に入る前にチョコや飴、辛いガム、カレー、温かいものを食べると耳が抜けやすくなる。</p></li>
+<li><p>普段からアゴを動かしたり、ガムを噛んだりして、耳管を鍛えるとよい。</p></li>
+<li><p>耳が抜けないからといって無理に耳抜きをしない。</p></li>
+</ul>
+</aside>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 対処：
+<ul class="simple">
+<li><p>痛みを感じなくなる水まで戻り、もう一度耳抜きをする。</p></li>
+<li><p>耳管が聞くように、唾や水分を取ると痛みが和らく。</p></li>
+<li><p>バディに耳が抜けないことを知らせる。</p></li>
+<li><p>Ex しても耳が痛むようであれば耳鼻科へ行く。</p></li>
+<li><p>鼓膜が破れたら速やかにEx して病院に行く。</p></li>
+<li><p>片方だけ抜けないときは抜けない方の耳を上にして抜いてみる。</p></li>
+</ul>
+</aside>
+<aside>
+❗ 強調！！
+<p>耳抜きには個人差があり、慣れてくると出来るようになることもあります。しかし、できなくても焦る必要はありません。心配しすぎないようにしましょう。</p>
+<p>普段耳抜きができる人でもストレスなどで急に耳抜きができなくなることがあります。つまり、何度も繰り返しますが、個人差はあるものの，全てのダイバーが気を付けなければならないトラブルの一つです。</p>
+</aside>
+</section>
+</section>
+<section id="id18">
+<h2>3. 鼻血が出たとき<a class="headerlink" href="#id18" title="Link to this heading">#</a></h2>
+<section id="id19">
+<h3>3-1. 症状<a class="headerlink" href="#id19" title="Link to this heading">#</a></h3>
+<p>潜水中に無理な耳抜きをしたとき、力をいれすぎたとき、サイナスのスクイーズ中に潜ったときなどに、鼻の毛細血管が水圧で押さえられ出血することがあります。浮上中、水圧が小さくなり、水面で鼻血がでたことに 気づくこともありますが、本人は気づかないことが多いです。 (「潜水の生理」参照)</p>
+</section>
+<section id="id20">
+<h3>3-2. 予防と対処<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>抜けないからといって無理に耳抜きをしない。</p></li>
+<li><p>サイナスのスクイーズ や痛いときは潜らないようにする。</p></li>
+</ul>
+<p>対処：</p>
+<ul class="simple">
+<li><p>気づいたら鼻血が出ていたということがあるので、焦らず落ち着く。</p></li>
+<li><p>鼻をかまないようにし、自然に止まるまで安静にする。すぐに止まらなければEx し、痛みが残るようなら病院に行く。</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="id21">
+<h2>4. 寒くなったとき<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<section id="id22">
+<h3>4-1. 症状<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>体が震える，唇が青くなる、歯がカチカチなる。 ・</p></li>
+<li><p>鼻水で鼻がつまり、サイナスのスクイーズになることもある。</p></li>
+<li><p>耳抜きがしにくくなる。</p></li>
+<li><p>寒い中ダイビングを続けると低体温症になる。(潜水の生理参照)</p></li>
+</ul>
+</section>
+<section id="id23">
+<h3>4-2. 予防と対処<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul>
+<li><p>ラッシュガード、フードペスト、新品のウェットスーツを着る。</p></li>
+<li><p>スーツなどの着るものはしっかりと乾かす。</p></li>
+<li><p>スーツのチャックはしっかりしめる。</p>
+<p>※着替える時に水を浴びると寒いので、お湯を準備するとよい。</p>
+</li>
+</ul>
+<p>対処：</p>
+<ul class="simple">
+<li><p>体を動かして体温を上げる。</p></li>
+<li><p>震えが止まらない時はすぐにExする。その後速やかに着替えて温かいものをとる。冬場は温かい飲み物・(アルコールはダメ)を用意しておくとよい。
+※ 活動のときは各商法瓶を用意した方がよい。</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="id24">
+<h2>5. 筋肉が攣った<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<section id="id25">
+<h3>5-1. 症状<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<p>筋肉が縮み、伸びなくなってしまった 状です。 ※着ったと思ってもまたつることがあります。体費的につりやすい人とつりにくい人に連れます。</p>
+</section>
+<section id="id26">
+<h3>5-2. 予防と対処<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<p>・筋肉が完全に収縮して動かなくなる前に、引っ張られる感覚があるため それに気づいたら筋肉を伸ばす。</p>
+<p>・体が覆い、筋肉がない、ミネラル不足なども原因となるため、普段から 体 を鍛えておく。梅干しや をなめるとミネラル不足は解消される。</p>
+<p>・朝食をしっかりとる。
+・水分を取る。</p>
+<p>・ストレッチやランニングなどのウォーミングアップをする。</p>
+<p>・食べ過ぎ、食べなさ過ぎ</p>
+<p>・食べ過ぎ，食べなさ過ぎをせず、普段から規則正しい生活を心がける。</p>
+<p>対処：</p>
+<ul class="simple">
+<li><p>つってしまっても焦らない!足など一人では伸ばしにくいところはバチ イに手伝ってもらう。筋肉を命はすときはゆっくりばす。この時、体は した場所を探んではいけない。つった 所は めるとつり● 防止にな</p></li>
+<li><p>足の物のときはブーツを説いで体ばす。</p></li>
+<li><p>沿っても安前にする。</p></li>
+<li><p>ひどいときはEx する。助けないようであれば、バディが値まで違れて行 ってくれるため心をはいらない。しかし、バディに依存してはいけない。 ・バナナ(カリウム)や楽理のスポーツ飲料、塩分などをとると国復しやす い。冷えたスポーツ飲料しかない場合は、口に含んで温めてから飲むとよい。</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="id27">
+<h2>6. 疲れている<a class="headerlink" href="#id27" title="Link to this heading">#</a></h2>
+<section id="id28">
+<h3>6-1. 症状<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
+<p>正しい判断ができないため，動作の正確さ，速さが鈍ります。</p>
+</section>
+<section id="id29">
+<h3>6-2. 予防と対処<a class="headerlink" href="#id29" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>無理をせず，海に入らない。バディに言うことを躊躇ってはいけない。</p></li>
+<li><p>海に行く前日はしっかりと寝る。</p></li>
+</ul>
+<p>対処：</p>
+<ul>
+<li><p>休憩を多く取る。ウェイトを外して浮力を確保し，回復を試みる。</p></li>
+<li><p>回復が期待できない，少しでも不安に感じる場合はExする。</p>
+<p>（バディの判断であっても，それに従う。）</p>
+</li>
+</ul>
+</aside>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="c">
+<h1>C. 水中拘束<a class="headerlink" href="#c" title="Link to this heading">#</a></h1>
+<aside>
+🪢 水中拘束とは
+<p>水中でなんらかの障害により，身動きができないことをいう。大変危険な状況である。</p>
+</aside>
+<p>⇒ ナイフを使用して水中拘束を解く。</p>
+<p>ナイフは，水中拘束時に拘束しているものを切ったり，破壊したりすることができます。しかし，切り方というものがあることや，そもそもナイフを使うだけが方法ではないことを覚えておいてください。それぞれの”対処法”を見ていきましょう。</p>
+<section id="c-1">
+<h2>C-1. 釣り針・漁網が絡まったとき<a class="headerlink" href="#c-1" title="Link to this heading">#</a></h2>
+<p>釣り針や漁網は細くて見えにくいため，ダイバーにとってかなり危険で厄介な存在です。</p>
+<section id="c-1-1">
+<h3>C-1.1 予防と対処<a class="headerlink" href="#c-1-1" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防：</p>
+<ul class="simple">
+<li><p>陸チェックで，釣り人や漁船の有無や位置を確認し，それらには近づかない。</p></li>
+<li><p>海では周囲を常によく見ることを心がける。</p></li>
+<li><p>釣り人などとコンタクトをとる。</p></li>
+</ul>
+<p>対処：</p>
+<ol class="arabic simple">
+<li><p>絡まったらまずは落ち着くこと。</p></li>
+</ol>
+<p>拘束された状態でパニックをおこし，暴れてしまうと，余計に絡まってしまう恐れがあります。</p>
+<ol class="arabic simple">
+<li><p>解決方法を考える。</p></li>
+</ol>
+<ul class="simple">
+<li><p>絡まって取れない場合は，釣り魚をナイフで切る。</p></li>
+<li><p>釣り針がスーツに引っかかった場合は，スーツを切り裂いても良い。</p></li>
+<li><p>釣り針が体に引っかかった場合は，釣り糸を切って病院へ行く。</p></li>
+<li><p>機材に引っかかった場合は，器材を捨てる。（器材の回収は安全だと判断したときのみ行う。）</p></li>
+</ul>
+<p>※水中拘束に遭うと，自分の見える範囲が狭くなり，身動きも自由に取れなくなることがあるので，バディに解いてもらうと良い。</p>
+</aside>
+<p><img alt="ナイフの使い方.JPG" src="12%20%E3%83%88%E3%83%A9%E3%83%95%E3%82%99%E3%83%AB%E3%81%AE%E4%BA%88%E9%98%B2%E3%81%A8%E5%87%A6%E7%BD%AE(%E4%BD%9C%E6%88%90%E9%80%94%E4%B8%AD)%20572a4aa45ea1451c9a0bb63b24742637/%25E3%2583%258A%25E3%2582%25A4%25E3%2583%2595%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9.jpg" /></p>
+</section>
+</section>
+<section id="c-2">
+<h2>C-2. 岩や珊瑚に引っかかったとき<a class="headerlink" href="#c-2" title="Link to this heading">#</a></h2>
+<p>穴潜りや浅いところを進むときに起こる可能性があります。</p>
+<section id="c-2-1">
+<h3>C-2.1. 予防と対処<a class="headerlink" href="#c-2-1" title="Link to this heading">#</a></h3>
+<aside>
+<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+<p>予防；</p>
+<ul class="simple">
+<li><p>安全そうなコースを通る</p></li>
+<li><p>穴くぐりをする場合は，周囲の地形を確認する。</p></li>
+<li><p>穴くぐりをする場合は，免許持ちやバディに確認を取る。</p></li>
+<li><p>穴潜りに対して不安を感じたり，自信を持てない場合は止めておく。</p></li>
+</ul>
+<p>対処：</p>
+<ol class="arabic simple">
+<li><p>まずは落ち着く。</p></li>
+<li><p>解決策を考える。</p></li>
+</ol>
+<ul class="simple">
+<li><p>バディに助けを求める。</p></li>
+<li><p>ナイフの柄や刃で岩や珊瑚を破壊する。</p></li>
+<li><p>スーツを脱ぐまたは切り裂く。</p></li>
+<li><p>機材に引っかかった場合は，器材を捨てる。</p></li>
+<li><p>（スキューバ時）BCにエアーを入れたり抜いたりして体勢を整える。</p></li>
+</ul>
+</aside>
+</section>
+</section>
+<section id="c-1-3">
+<h2>C-1.3.　その他のナイフの使い方<a class="headerlink" href="#c-1-3" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>流れの強いところで海底にナイフを刺して進む（スキューバ時）</p></li>
+<li><p>タンクを叩いて，バディに気づかせる（スキューバ冊子参照）</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="11yakuhinn.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">11. 薬品とダイビング</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="13sutoresu.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">13. ストレスとパニック(作成中)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">12. トラブルの予防と処置(作成途中)</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#a">A. 海況によるトラブル</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">流れによるトラブル</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1. 基本的な予防と処置</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2. リップカレント(離岸流)に対する予防と対処</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3. ロングジョアカレント(沿岸流)に対する予防と処置</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">波によるトラブル</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ex">1. 高波でExが困難</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2. 波にのまれた</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">器材のトラブル</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1.マスクが曇ったとき</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2. マスクに水が入る</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3. シュノーケルに水が入る</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4. フィンのストラップが切れたとき</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#b">B. 心身のトラブル</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">1. 波酔い</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">1-1. 症状</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2. 耳が痛くなった，耳抜きができない</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2-2. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">3. 鼻血が出たとき</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">3-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">3-2. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">4. 寒くなったとき</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">4-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">4-2. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">5. 筋肉が攣った</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">5-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">5-2. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">6. 疲れている</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">6-1. 症状</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">6-2. 予防と対処</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#c">C. 水中拘束</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1">C-1. 釣り針・漁網が絡まったとき</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1-1">C-1.1 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-2">C-2. 岩や珊瑚に引っかかったとき</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-2-1">C-2.1. 予防と対処</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-1-3">C-1.3.　その他のナイフの使い方</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By U.R.D.C.琉大ダイビング部
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
