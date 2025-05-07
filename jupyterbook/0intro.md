@@ -1,4 +1,3 @@
-# Welcome to  Jupyter Book
 
 ## About US
 

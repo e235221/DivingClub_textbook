@@ -3,7 +3,7 @@
 
 # title: U.R.D.C.DivingTextBook
 author: U.R.D.C.琉大ダイビング部
-logo: figs/univ_logo.png
+logo: figs/logo.jpg
 description: >-
   ダイビング初心者を対象にした教材である。
 
@@ -43,7 +43,7 @@ bibtex_bibfiles:
 
 # Information about where the book exists on the web
 repository:
-  url: https://github.com/executablebooks/jupyter-book # Online location of your book
+  url: https://e235221.github.io/DivingClub_textbook/intro.html
   path_to_book: docs # Optional path to your book, relative to the repository root
   branch: master # Which branch of the repository should be used when creating links (optional)
 
