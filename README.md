@@ -1,8 +1,9 @@
 
 U.R.D.C.ダイビング部の赤冊子の内容をjupyter notebookに変換したものです。 過去10年間の赤冊子の内容と部室内にある書籍類を参考にして作成しています。 まだ未完成なので，誤植は多いと思いますが気長にみてください。
 
---docsは2025/05/05/07時点でjb buildしたhtml filesをcopyしたものである。--
-rootディレクトリで，`jb build jupyterbook/ --path-output docs`をすることで，jupyterbookのbuild出力先をdocs/に変更できます。（/jupyterbookで`jb build`もできますが，その場合build成果物をdocsにコピーしなければならず手間なため，`jb build jupyterbook/ --path-output docs`を推奨します。）
+- docsは2025/05/05/07時点でjb buildしたhtml filesをcopyしたものである。
+- （理由（なぜそんなめんどくさいことをしているのか））：rootディレクトリで，`jb build jupyterbook/ --path-output docs`をすることで，jupyterbookのbuild出力先をdocs/に変更できるが， docs/ にフラットに吐き出す機能がないため，どうしても _build/html 配下に出力される仕組みになってしまい，/jupyterbookで`jb build` => `_build/html`をdocs/にコピーしなければならない。
+- Shell Scriptを作れば解決するが，最小の環境依存にするため排除した。
 
 ### ディレクトリ構造
 - root/docs
