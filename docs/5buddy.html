@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5. バディシステム &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '5buddy';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. 環境学" href="6env.html" />
+    <link rel="prev" title="4. スキンダイビング" href="4skin.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/univ_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="_static/univ_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to  Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1kisoku.html">1.部内部則</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="2menkyo.html">2.免許制度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3kizai.html">3.器材(作成する)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4skin.html">4. スキンダイビング</a></li>
+
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. バディシステム</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="6env.html">6. 環境学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7point.html">7. ポイントについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8kagaku.html">8. 潜水の科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9seiri.html">9.潜水の生理_figadd / なんかおかしい</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10log.html">10. ログ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11yakuhinn.html">11. 薬品とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12toraburu.html">12. トラブルの予防と処置(作成途中)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13sutoresu.html">13. ストレスとパニック(作成中)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14navi.html">14. ナビゲーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15rennshuu.html">15. 練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16night.html">16. ナイトダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17josei.html">17. 女性とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18kamera.html">18. カメラ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F5buddy.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/5buddy.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>5. バディシステム</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5. バディシステム</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">バディシステム</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.1. バディ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.2. バディシステム</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.3. リーダーについて</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.4. 実際にバディを組む</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">5.5. バディと関連する事項</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>5. バディシステム<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>バディシステム<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>バディシステムとは，2~3人でともにダイビングをすることです。U.R.D.C.では，インストラクターをつけずに，部員のみでダイビングを行なっているため，<strong>部員一人ひとりが十分にバディシステムの特性とルールを理解</strong>した上で，責任と自覚を持ってダイビングを行うことが必要です。</p>
+</div></blockquote>
+<section id="id3">
+<h2>5.1. バディ<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>バディとは，ともにダイビングを行う仲間のことです。</p>
+<p>1人では得られない知識や楽しみを共有し，危険も共有する存在です。バディは<strong>常に一緒</strong>に行動しなければならず，先輩後輩の関係であっても，<strong>バディは平等</strong>です。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>単独ダイビング禁止【重要禁止事項】</p>
+</div>
+</section>
+<section id="id4">
+<h2>5.2. バディシステム<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>広い海では不安になることが多く，バディが大きな心の支えとなります。そのため，U.R.D.C.では2~3人でチーム，つまりバディを組んで海に入ります。</p>
+<p>バディがいることで，<strong>1人では気づけなかった危険に気づくことができたり，緊急時に助けられたり</strong>と，より安全なダイビングが可能になります。自分の知らない生物を発見したり，生物の知識，海での楽しさ，技術などを共有できます。このようにバディシステムによって，安全に楽しいダイビングを行うことができるのです。</p>
+<p>しかし，バディがいるから安全とは言い切れません。バディに依存せず，自分の身は自分で守ることができるダイバーになりましょう。</p>
+<div class="note admonition">
+<p class="admonition-title">バディシステム8箇条</p>
+<ul class="simple">
+<li><p>バディ同士はお互いに助け合い，協力し合わなければならない</p></li>
+<li><p>バディは常に一緒に行動する。バディ内の1人でもEx必要とする場合は全員Exする。</p></li>
+<li><p>どんな状況でも，「自分の命は自分で守る」という自己管理を忘れずに行動する</p></li>
+<li><p>救助する場合も自分の命を第一に考え行動する。自分の命が危険にさらされる場合は，無理に救助しなくて良い。</p></li>
+<li><p>バディ一人ひとりが緊急時の際に，バディを助けられる知識と技術を持つ。</p></li>
+<li><p>緊急時のマニュアル，禁止事項，救助方，危険生物とその処置，バディの特徴・体調，ポイントの特徴などを頭に入れておく。</p></li>
+<li><p>バディの1人でも部規則に違反した場合，バディ全体の責任である。</p></li>
+<li><p>バディを組んだからといっても必ずしも安全というわけではない。安全にダイビングを行うためには，バディ同士が協力しあい，努力を積み重ねることが必要になります。そのためにも，一人ひとりが最低限のことは自分でできる自立したダイバーになりましょう。</p></li>
+</ul>
+</div>
+</section>
+<section id="id5">
+<h2>5.3. リーダーについて<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>リーダーとは、バディ内で中心となってダイビングを進める人のことである。バディ内で1人決定し，部内免許の有無にかかわらず誰でもなることができる。</p>
+<p>＜行うこと＞</p>
+<ul class="simple">
+<li><p>海での行動決定権はリーダーにある</p>
+<ul>
+<li><p>海況や地形を見て，<strong>適切なコースを決める。</strong></p></li>
+</ul>
+</li>
+<li><p><strong>陸チェック</strong>を行う</p></li>
+<li><p>海では先頭を泳ぎ，</p>
+<ul>
+<li><p><strong>バディの様子をこまめに確認する。</strong></p></li>
+<li><p><strong>バディチェック</strong>を行う(非リーダーも行う)</p></li>
+<li><p>チェック回数(頻度)は，バディのスキル，体調，海況，地形等を考慮し加減する。</p></li>
+<li><p><strong>バディ間距離</strong>をバディのスキルや体調，海況によって決定する。</p></li>
+</ul>
+</li>
+<li><p>非リーダーはリーダーを追い越してはならない【禁止事項】</p></li>
+</ul>
+<p>できるだけ過去にそのポイントで潜ったことがあり，地形や特徴を把握している人がリーダーをとるのが望ましい。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>バディチェックとは</p>
+<ul>
+<li><p>バディ間距離やバディの様子を，目や表情，顔色などを見たり，水中サインや会話などで確認すること。</p></li>
+</ul>
+</li>
+<li><p>海況が悪いとき</p>
+<ul>
+<li><p>流れ・波・うねりが強いときや，海の透明度が低いとき，天候などで視界が悪いときなどである。
+※スキューバダイビング，ナイトダイビングでは得に，視界が悪いため，バディ距離を近めにする。</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="id6">
+<h2>5.4. 実際にバディを組む<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>バディ内に1人部内免許持ちがいれば，バディを組むことができます。</p>
+<p>（部内免許持ちは，非免許持ちを2人まで海に連れて行けます。）</p>
+<ul class="simple">
+<li><p>色々な人とバディを組むことで，新たな発見・知識・楽しみ方が得られ，自分のスキルアップにつながっていく。</p></li>
+<li><p>魚やウミウシに詳しい人と行けば知識が，スキルの高い人・低い人と行けば，スキルアップがきっと得られるはずです。</p></li>
+</ul>
+<p>バディの組み方は自由なので，海の楽しみ方も無限大！</p>
+<p>ただし，バディにストレスや不安を感じるようであればファンを断っても大丈夫！バディはいつも平等です。</p>
+</section>
+<section id="id7">
+<h2>5.5. バディと関連する事項<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>注意事項</p>
+<ul class="simple">
+<li><p>バディ全員が緊急時のマニュアルを理解しておく</p></li>
+<li><p>海況・体調面で無理をしないこと。海に入らないと判断する詩も大切。</p></li>
+<li><p>バディを信頼しても，依存はしない。自己管理が絶対。</p></li>
+</ul>
+<p>禁止事項</p>
+<ul class="simple">
+<li><p>リーダーを追い越さない</p></li>
+<li><p>同時にジャックナイフをしない</p></li>
+</ul>
+<p>バディシステムに関する重要禁止事項</p>
+<ul class="simple">
+<li><p>バディ内に必ず1人以上は，部内免許持ちがいなければ，海に入ってはならない。</p></li>
+</ul>
+</div>
+<p>ダイビングは自然の中で行うスポーツです。その分危険も伴いますが，陸では絶対体験できない感動を味わうことができます。バディシステムを理解して，安全で楽しいダイビングができるようにこれからどんどん経験を積んでいきましょう！いろんな人と海に行き，様々な角度から海を楽しんでください！</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="4skin.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">4. スキンダイビング</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="6env.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">6. 環境学</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5. バディシステム</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">バディシステム</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.1. バディ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.2. バディシステム</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.3. リーダーについて</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.4. 実際にバディを組む</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">5.5. バディと関連する事項</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By U.R.D.C.琉大ダイビング部
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

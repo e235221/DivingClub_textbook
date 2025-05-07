@@ -1,0 +1,834 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>4. スキンダイビング &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '4skin';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="5. バディシステム" href="5buddy.html" />
+    <link rel="prev" title="3.器材(作成する)" href="3kizai.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/univ_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="_static/univ_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to  Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1kisoku.html">1.部内部則</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="2menkyo.html">2.免許制度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3kizai.html">3.器材(作成する)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. スキンダイビング</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5buddy.html">5. バディシステム</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="6env.html">6. 環境学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7point.html">7. ポイントについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8kagaku.html">8. 潜水の科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9seiri.html">9.潜水の生理_figadd / なんかおかしい</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10log.html">10. ログ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11yakuhinn.html">11. 薬品とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12toraburu.html">12. トラブルの予防と処置(作成途中)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13sutoresu.html">13. ストレスとパニック(作成中)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14navi.html">14. ナビゲーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15rennshuu.html">15. 練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16night.html">16. ナイトダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17josei.html">17. 女性とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18kamera.html">18. カメラ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F4skin.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/4skin.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>4. スキンダイビング</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. スキンダイビング</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.1 基本技術</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フィン•キック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">平泳ぎ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">立ち泳ぎ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.2 ウェイトについて</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">適正ウェイトの量り方</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ウェイトベルトをつけるときの注意点</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">4.3 耳抜き</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">耳抜きの方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">4.4 ジャックナイフ</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4.5 緊急時マニュアル</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">自分がリーダーのとき</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">自分が非リーダーのとき</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">緊急時連絡先</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>4. スキンダイビング<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2>4.1 基本技術<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>スキンダイビングは，基本的に次の9つの器材を装備する。</p>
+<ul class="simple">
+<li><p>マスク</p></li>
+<li><p>シュノーケル</p></li>
+<li><p>フィン</p></li>
+<li><p>ウェットスーツ</p></li>
+<li><p>ブーツ</p></li>
+<li><p>グローブ</p></li>
+<li><p>ナイフ</p></li>
+<li><p>防水時計</p></li>
+<li><p>ウェイト</p></li>
+</ul>
+<p>ウェイトを除く8つの器材のうち，１つでも忘れた場合，海に入れません。【重要禁止事項】毎回の活動，Funのなかで，忘れ物をしないように気をつけましょう。</p>
+<div class="note admonition">
+<p class="admonition-title">器材を使った基本技術</p>
+<p><strong>マスククリア</strong>：
+ダイビング中にマスクの中に水が入ってしまった時に，水を排出する方法。</p>
+<ol class="arabic simple">
+<li><p>水面に対し約30度上方を見上げる</p></li>
+<li><p>マスク上部のフレームを手で押さえる</p></li>
+<li><p>鼻から息を吐き出し，マスク下部から水を排出する
+※マスク内に海水が入るととても目が痛いが，障害物や危険を回避できるように絶対に目を閉じない。</p></li>
+</ol>
+<p><strong>マスク・ブロー</strong>：
+深く潜るにつれて水圧が高くなり，マスクが額に押しつけられていく。このときの圧迫感や痛みを解消するための技術である。</p>
+<ol class="arabic simple">
+<li><p>鼻から軽く息を出す</p></li>
+</ol>
+<p><strong>シュノーケルクリア</strong>：
+ダイビング中，シュノーケル内に海水が入ってしまうことがしばしばある。そんなときにシュノーケルを口に咥えたまま，素早く排水するための技術である。</p>
+<ol class="arabic simple">
+<li><p>シュノーケルを咥えたまま，口から勢いよく息を吐き出す</p></li>
+<li><p>一度に排水しきれないときは，何度か繰り返す</p></li>
+</ol>
+</div>
+<section id="id3">
+<h3>フィン•キック<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>ダイビングではフィンをつけて泳ぎます。フィンは正しく使えば大きな推進力を得ることができますが，慣れないうちはなかな難しいものです。</p>
+<ul>
+<li><p>一般的に良いフィンキック：</p>
+<p>膝・足首が伸びていて，足全体を大きく上下させて水をかいている。</p>
+</li>
+<li><p>悪いフィンキック：</p>
+<p>自転車を漕ぐように足が前後に動き，足の裏で水を蹴ってしまう。俗に言う「チャリンコキック」です。</p>
+</li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">フィンキック</p>
+<ul class="simple">
+<li><p>膝，足首が伸びていて，足全体で大きくゆっくり水をかいている</p></li>
+<li><p>背筋を伸ばして体を水平に保つ</p></li>
+<li><p>フィンはなるべく海面から出さない。出るのは踵の部分だけ</p></li>
+<li><p>上半身の力を抜いて，手は使わない</p></li>
+<li><p>進行方向に視線を向ける</p></li>
+</ul>
+</div>
+<figure class="align-default" id="fig-fin-kick">
+<a class="reference internal image-reference" href="_images/fin_kick.png"><img alt="_images/fin_kick.png" src="_images/fin_kick.png" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 1 </span><span class="caption-text">正しいフィンキックと悪いフィンキック</span><a class="headerlink" href="#fig-fin-kick" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>これらは一般論であり，練習やFunのなかで，自分に合ったフィンキックを見つけましょう。</p>
+<p>動画の方がわかりやすいかもしれません：<a class="reference external" href="https://www.youtube.com/watch?v=okA1SZB_A7k">youtube：達人のフィンキック（https://www.youtube.com/watch?v=okA1SZB_A7k）</a></p>
+</section>
+<section id="id4">
+<h3>平泳ぎ<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>フィンキックのできないくらい水深の浅いところでは，平泳ぎをします。フィンをつけての平泳ぎは，通常のものと足の使い方が異なります。フィンをつけていると，足をひきつけるときの水の抵抗が大きくなるため，両膝をつけ，かかとをお尻につけるようにして，足を体に引き付けます。</p>
+</section>
+<section id="id5">
+<h3>立ち泳ぎ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>立ち泳ぎとは、水面に対し体を垂直にし、顔を上げた状態を維持する技術です。このとき下に向かってバタ足をするのではなく、フィンを水平に動かして水をかくと疲れにくく、砂も巻き上げにくくなります。樺々な方法があるので自分にあったものを探していきましょう。</p>
+</section>
+</section>
+<section id="id6">
+<h2>4.2 ウェイトについて<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="id7">
+<h3>適正ウェイトの量り方<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>ウェイトをつけると，スーツなどの浮力が相殺され，潜水しやすくなりますが，適切な重さのウェイトをつかないと，泳ぎにくくなり危険が高まります。特にウェイトが重すぎる場合，浮上がしにくくなりブラックアウト(意識喪失)の危険性が高まります。　適正ウェイトの目安は「自分の体重×0.1」となっていますが，実際には体質や個体差によって変化します。適正なウェイト質量を量って，安全なダイビングを心がけましょう。</p>
+<ol class="arabic simple">
+<li><p>手足を動かさないで，水面に対して垂直に浮き，量ってくれているバディと向かい合う</p></li>
+<li><p>バディが差し出した手に自分の手を上から重ね，見つめ合う</p></li>
+<li><p>自然な呼吸を行う。このとき呼吸に合わせて体が上下するが，水面がマスクの幅の中におさまっていれば，それが適正ウェイトである。</p></li>
+</ol>
+<figure class="align-default" id="fig-right-weight">
+<a class="reference internal image-reference" href="_images/right_weight.jpeg"><img alt="_images/right_weight.jpeg" src="_images/right_weight.jpeg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 2 </span><span class="caption-text">適正ウェイトの量り方</span><a class="headerlink" href="#fig-right-weight" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id8">
+<h3>ウェイトベルトをつけるときの注意点<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>ウェイトベルトのあまりが，必ず体の左側にくるようにつける</p></li>
+<li><p>ウェイトベルトのあまりをしまいこまず，そのままにする</p></li>
+<li><p>ウェイトは偏りのないように均等にウェイトベルトにつける。</p></li>
+</ul>
+<p>上記の注意点は，事故が起こったときに救助者がすぐにウェイトを外せられるようにするためのものなので，厳守する。</p>
+<p>ウェイトは偏りのないように均等にウェイトにベルトをつける。</p>
+<figure class="align-default" id="fig-weight">
+<a class="reference internal image-reference" href="_images/weight.png"><img alt="_images/weight.png" src="_images/weight.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 3 </span><span class="caption-text">偏りのないようにつけられたウェイト</span><a class="headerlink" href="#fig-weight" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id9">
+<h2>4.3 耳抜き<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>潜降するにつれて体内と体外の圧力に圧力差が生じ，耳やマスクなどに圧迫感が出てきます。そのまま潜降を続けると，圧迫感が不快感になり，さらに潜降を続けると痛みが出ることもあります。マスクの場合，先ほど説明したマスク・ブローで解決できますが，耳の場合は耳抜きという技術で解消できます。耳抜きをやることで，耳管が開き，鼻から空気を鼓膜の内側に送り，中耳・内耳の内圧と外圧を同じにして，耳に起きうる障害を防止することができます。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>耳抜きとは</strong>
+潜降するにつれて体内と体外の圧力に圧力差が生じ，耳やマスクなどに圧迫感が出てくる。そのまま潜降を続けると,不快感,さらには痛みが出ることもある。これを解消するために，耳抜きを行い，耳に起きうる障害を防止できる。</p>
+</div>
+<section id="id10">
+<h3>耳抜きの方法<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>耳抜きの方法</p>
+<p>耳抜きは，慣れないうちはなかなかできないかもしれませんが，何度も海に行くうちに自然と身についてくるものなので，心配はいりません。やり方が色々あるので，いろいろ試してみて，自分が一番やりやすいものを見つけると良いでしょう。</p>
+<p>方法：</p>
+<ul class="simple">
+<li><p>鼻をつまんだ状態で，鼻から息を出そうとする。(鼻をかむような感覚)。うまくいかない場合は，目を閉じてやる。</p></li>
+<li><p>唾を飲み込む</p></li>
+<li><p>顎を動かす（顎を動かすことによって耳管が開く）</p></li>
+<li><p>鼻をつまんで唾を飲み込む（トレンビー法）</p></li>
+<li><p>鼻をつまんで顎を飲み込む（バルサルバ法）</p></li>
+<li><p>鼻をつまんで顎を動かしながら唾を飲み込む</p></li>
+</ul>
+<p>これらをやってみて，ピシッ・プチッなどの音が両耳あたりでしたら成功です。</p>
+<p>鼻をつままずにできるようになると，片手を使わなくて済み，動作に余裕ができて楽に潜降できるので，試してみると良いでしょう。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>耳抜きの注意点</p>
+<ul class="simple">
+<li><p>潜降中耳が痛いと感じた時は，それ以上潜らずに浮上する。</p></li>
+<li><p>耳が痛くなってからだと耳が抜けにくくなり，鼓膜に負担がかかってしまうので，痛いと感じる前にこまめに耳抜きをする。</p></li>
+<li><p>うまくできないときは，浅い水深で練習すると良い。また，頭を上に向けると耳抜きしやすい。</p></li>
+<li><p>片方の耳しか抜けていない場合は，抜けていない方の耳を水面に向けて耳抜きをすると抜ける場合がある。無理に耳抜きを行うと抜けている方の耳に負担がかかるので，抜けにくいときは潔く浮上する。</p></li>
+<li><p>寒いとき・緊張しているとき・風邪のとき・鼻炎のとき・寝不足のときなど体調が悪いときは，耳が抜けにくいので注意する。</p></li>
+<li><p>陸で耳抜きの練習をやりすぎない（逆に鼓膜の負担になる）</p></li>
+<li><p>耳栓をすると耳抜きをしづらくなるのでしない。また，適度に耳掃除をする。</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id11">
+<h1>4.4 ジャックナイフ<a class="headerlink" href="#id11" title="Link to this heading">#</a></h1>
+<p>ジャックナイフとは，スキンダイビングで水中に潜降する方法です。潜れるようになってくると，海が何倍も楽しくなっていきます。</p>
+<p>ジャックナイフの方法</p>
+<ol class="arabic">
+<li><p>うつ伏せの姿勢で水面に浮き，目標物を見つけたらそれが自分のおへその真下に来るように水面移動し，両手を顔の前に伸ばす。</p>
+<p>呼吸を整えたら，腰を中心にして体を直角に折り曲げ，上半身と水面を垂直下方になるようにする。このとき，目線は目標物から離さない。</p>
+</li>
+<li><p>両足をそろえてまっすぐ伸ばした状態で，一気に蹴り上げる。</p></li>
+<li><p>体が一直線になるようにすれば，水面上に出た下半身の重みで，ある程度の深さ(2~3m)までスーッと先行できる。沈みにくいときは，前に伸ばした手をひとかきして，フィン先が水面下に来るのを待つ（その前にフィンキックをすると，空気を蹴るだけで推進力を得られない）。</p></li>
+<li><p>フィンが完全に水面下に沈んだらフィンキックを開始し，さらに垂直下方に潜っていく。フィンキックは足全体を使って，**「大きく・ゆっくり」**を心がける。ジャックナイフがうまく決まれば，フィンキックなしでも水深3mくらいまでは潜降できる。こまめに耳抜きをしよう。</p></li>
+<li><p>浮上するときは，水面を見ながら，岩や人に頭が当たるのを防ぐため，頭上に片手をかざす。そして，周囲を確認するために横に360度回転しながら浮上する。</p></li>
+<li><p>水面に出たらシュノーケルクリアをする。</p></li>
+</ol>
+<p>ポイント</p>
+<p>慣れないうちは，振り上げる足が揃っていなかったり，タイミングがずれていたりして体がうまく水中に沈まなかったり，勢いあまって一回転してしまったりすることもあります。下記のポイントをよく読んで，コツを掴んでください。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>ポイント</p>
+<ul class="simple">
+<li><p>目標物はおへその真下にもってくる。そして，潜降中は目を離さない。</p></li>
+<li><p>水面で軽く耳抜きをしておく（無理な耳抜きはしない）。</p></li>
+<li><p>上半身を折り曲げるときに，両手を重ねれば体が安定する。</p></li>
+<li><p>フィンが完全に水中に沈むまでフィンキックをしない。</p></li>
+<li><p>手をかきすぎない。フィンキックだけで十分潜っていくことは可能である。</p></li>
+<li><p>足を強めに振り上げてみる。</p></li>
+</ul>
+</div>
+<figure class="align-default" id="id16">
+<img alt="_images/jackknife.jpg" src="_images/jackknife.jpg" />
+<figcaption>
+<p><span class="caption-number">Fig. 4 </span><span class="caption-text">ジャックナイフの方法</span><a class="headerlink" href="#id16" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>❗ 注意点</p>
+<ul class="simple">
+<li><p>同時ジャックナイフをしないように，潜る前にバディが水面にいるかをしっかり確認する。</p></li>
+<li><p>無理に息をこらえず，余裕を持って浮上する。</p></li>
+<li><p>ハイパーベンチレーションをしない。</p></li>
+<li><p>水圧で耳が痛くなると，中耳や外耳を痛めてしまうかもしれないので，痛くなる前にこまめに耳抜きをする。うまく耳抜きができないときは，無理して潜らない。</p></li>
+<li><p>苦しくなっても水中で息を吐かない。</p></li>
+<li><p>はじめのうちは浅いところで，耳抜きと並行して練習するとよい。</p></li>
+<li><p>耳抜きができているかよくわからないときは，無理せず浮上する。</p></li>
+</ul>
+</div>
+<p>ジャックナイフの成功例の動画が上がっていたので，参考にすると良いだろう。
+<a class="reference external" href="https://divingfan.net/diving-glossary/6080/">ジャックナイフダイブ</a></p>
+<section id="id12">
+<h2>4.5 緊急時マニュアル<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<section id="id13">
+<h3>自分がリーダーのとき<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>バディを見失ったら，最後にバディを確認した場所まで探しながら戻る。そして，そこで大声を出したり，水飛沫をあげたりして目立つ行動をとりながら，水面で，水中・水面・陸にバディがいないか3分間探す。このとき自分は水中に潜らない。</p></li>
+<li><p>3分間探しても見つからない場合は，速やかに陸に上がる。そして，まず海上保安庁に連絡し，消防・救急・警察，部長・副部長・顧問に<strong>必ず電話</strong>で連絡する。</p></li>
+<li><p>連絡が終わったら周囲の人に協力してもらって，陸からバディを探す。このとき，海の中にバディがいるのを発見したら，決して海に再Enせずに，陸に上がってくるよう促す。</p></li>
+</ol>
+</section>
+<section id="id14">
+<h3>自分が非リーダーのとき<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>バディを見失ったら，その場で大声を出したり，水飛沫をあげたりして目立つ行動をとりながら，水面で水中・水面・陸にバディがいないか3分間探す。このとき，自分は水中に潜らない。</p></li>
+<li><p>以下，リーダーのときと同じ。</p></li>
+</ol>
+<p>※ 探す時間は3分となっているが，その日のバディスキル・技量・体調など，その場の状況や海況によって探す時間を決めて，バディ全員で確認しておく。決めた時間は厳守する。</p>
+</section>
+</section>
+<section id="id15">
+<h2>緊急時連絡先<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>海上保安庁（最初に連絡）</p></th>
+<th class="head"><p>118</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>消防・救急</p></td>
+<td><p>119</p></td>
+</tr>
+<tr class="row-odd"><td><p>警察</p></td>
+<td><p>110</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>顧問（小枝先生）：‭090 9217 2837‬</p>
+<p>※ 活動・合宿以外で海に行ったときは，バディ・ポイント・目的・En,Ex予定時刻を顧問と，LINEに連絡する。</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="3kizai.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">3.器材(作成する)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="5buddy.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">5. バディシステム</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4. スキンダイビング</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.1 基本技術</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">フィン•キック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">平泳ぎ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">立ち泳ぎ</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">4.2 ウェイトについて</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">適正ウェイトの量り方</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">ウェイトベルトをつけるときの注意点</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">4.3 耳抜き</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">耳抜きの方法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">4.4 ジャックナイフ</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">4.5 緊急時マニュアル</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">自分がリーダーのとき</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">自分が非リーダーのとき</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">緊急時連絡先</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By U.R.D.C.琉大ダイビング部
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

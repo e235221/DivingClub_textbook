@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1.部内部則 &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1kisoku';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2.免許制度" href="2menkyo.html" />
+    <link rel="prev" title="Welcome to Jupyter Book" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/univ_logo.png" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="_static/univ_logo.png" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to  Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1.部内部則</a></li>
+
+
+<li class="toctree-l1"><a class="reference internal" href="2menkyo.html">2.免許制度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3kizai.html">3.器材(作成する)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4skin.html">4. スキンダイビング</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5buddy.html">5. バディシステム</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="6env.html">6. 環境学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7point.html">7. ポイントについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8kagaku.html">8. 潜水の科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9seiri.html">9.潜水の生理_figadd / なんかおかしい</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10log.html">10. ログ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11yakuhinn.html">11. 薬品とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12toraburu.html">12. トラブルの予防と処置(作成途中)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13sutoresu.html">13. ストレスとパニック(作成中)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14navi.html">14. ナビゲーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15rennshuu.html">15. 練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16night.html">16. ナイトダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17josei.html">17. 女性とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18kamera.html">18. カメラ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F1kisoku.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/1kisoku.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1.部内部則</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.部内部則</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">琉球大学ダイビングクラブ規約</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">第一章 総則</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">名称</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">第二章 部員</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">第三章 役員</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">第四章</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">第五章 入郎・休部・進部・除籍</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">第六章:経理</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">第七章 部則</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">贊助団体</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">事故の責任</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">琉球大学ダイビングクラブ部内規約</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">琉球大学ダイビングクラブ　重要禁止事項</a></li>
+</ul>
+</li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>1.部内部則<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id2">
+<h1>琉球大学ダイビングクラブ規約<a class="headerlink" href="#id2" title="Link to this heading">#</a></h1>
+<section id="id3">
+<h2>第一章 総則<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+</section>
+<section id="id4">
+<h2>名称<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>第１条　本クラブは琉球大学ダイビングクラブと称する。</p>
+<p>事務所
+第２条　本クラブは事務所を琉球大学構内（西原町千原１番地）に置く。</p>
+<p>所属
+第３条　本クラブは琉球大学体育団体連合会に属する。</p>
+<p>目的
+第４条　本クラブは安全潜水の普及と潜水のモラルの向上、潜水技術の進歩・発展および部員間の親睦・友好を深めることを目的とする。</p>
+<p>活動・行事
+第５条　本クラブは前条の目的を達成するために、次の次の活動や諸行事を行う。</p>
+<p>1） 技術講習会
+2） 学習会
+3） 合宿
+4） 関連団体との交流および情報交換
+5） その他、必要な活動及び行事</p>
+</section>
+<section id="id5">
+<h2>第二章 部員<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>部員
+第6条 部員とは、本クラブに所属する学生をいい、次の2つに分けられる。</p>
+<ol class="arabic simple">
+<li><p>現役部員:本クラブでの3年次までの部員</p></li>
+<li><p>賛助部員:本クラブでの4年次以上の部員</p></li>
+</ol>
+<p>部員の権利
+第7条</p>
+<ol class="arabic simple">
+<li><p>部員はクラブの活動・行事に参加する権利を有する。</p></li>
+<li><p>現役部員は総会における議決権、役員の選挙権・被選挙権を有する。</p></li>
+<li><p>賛助部員は総会における議決権を有する。
+但し、 役員の選挙権・被選挙権は有さない。
+部員の義務</p></li>
+</ol>
+<p>第8条</p>
+<ol class="arabic simple">
+<li><p>部員は部費を納入する義務を負う。
+なお、部費については第9条に定める</p></li>
+<li><p>部員は学生教育研究災害保険に加入する義務を負う。</p></li>
+</ol>
+<p>部費・部車積立費
+第9条</p>
+<ol class="arabic simple">
+<li><p>部員は部員として前期8000円、後期7000円を2期に分けて
+納入する。
+但し、最高学年の部員の後期部費は5000円とする。</p></li>
+<li><p>部員は部車積立費として前期1600円、後期1400円を2期に
+分けて納入する。
+但し、最高学年の部員の後期部車積立費は1000円とする。</p></li>
+</ol>
+</section>
+<section id="id6">
+<h2>第三章 役員<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>役員
+第10条 本クラブは次の役員を置く。</p>
+<ol class="arabic simple">
+<li><p>部長</p></li>
+<li><p>副部長</p></li>
+<li><p>書記</p></li>
+<li><p>会計</p></li>
+<li><p>備品管理</p></li>
+<li><p>部車</p></li>
+<li><p>連絡</p></li>
+<li><p>年報</p></li>
+<li><p>救急</p></li>
+<li><p>その他必要な係を置く</p></li>
+</ol>
+<p>※なお、各役員の人数および仕事は別に定める。</p>
+<p>選挙
+第11条 本クラブの役員は総会並びに部会において互選する。</p>
+<p>任期
+第12条 役員の任期は1年間とし、12月に役員交代を行う。
+但し、会計の任期は2年間とする。</p>
+</section>
+<section id="id7">
+<h2>第四章<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>機関
+第13条 本クラブは次の機関を置く。</p>
+<ol class="arabic simple">
+<li><p>総会</p></li>
+<li><p>部会</p></li>
+<li><p>役員会</p></li>
+</ol>
+<p>総会
+第14条</p>
+<ol class="arabic simple">
+<li><p>総会は役員によって構成し、最高議決機関とする。
+但し、総会は全部員の2/3以上の出席をもって成立する。</p></li>
+<li><p>総会は部長が招集する。 なお、部員の1/3以上の要請があった場合、
+部長は総会を招集しなければならない。</p></li>
+</ol>
+<p>部会
+第15条 部会は部員をもって構成し、定期的に行う。</p>
+<p>投員会
+第16条 役員会は役員をもって構成し、必要に応じて行う。</p>
+</section>
+<section id="id8">
+<h2>第五章 入郎・休部・進部・除籍<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>入部
+第17条 保護者の承諾を得て、入部届・響約書を提出を必須とする。
+なお、入部金については第18条に定める。</p>
+<p>入部金
+第18条 本クラブは入部に際して、入部金として5000円を納入する。</p>
+<p>休部・進部
+第19条 やむを得ない理由により、休部または退部するものは、部長に
+その願い出を提出し、部長が許可を出すこととする。</p>
+<p>除籍
+第20条 以下の者を役員会において除籍することができる。</p>
+<ol class="arabic simple">
+<li><p>部員で部費を理由なく長期滞納した者。</p></li>
+<li><p>現役部員で部会・総会に長期欠席した者。</p></li>
+<li><p>部員で誓約書の事項に反した者。</p></li>
+</ol>
+</section>
+<section id="id9">
+<h2>第六章:経理<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>会計年度
+第21条 本クラブの会計年度は4月1日に始まり、３月３１日をもって終わる。</p>
+<p>経理
+第22条</p>
+<ol class="arabic simple">
+<li><p>本クラブの経費は入部金・部費・学生会の研究クラブ決算割り当て
+をもってこれにあてる。</p></li>
+<li><p>機材販売や大学際でのバザー等による臨時収入もこれにあてる。</p></li>
+<li><p>その他、必要に応じて徴収しこれにあてる。</p></li>
+</ol>
+<p>予算
+第23条 予算は会計が作成し、総会で承認を得る。</p>
+<p>決算
+第24条 収支決算は会計年度末に行い、総会で承認を得る。</p>
+</section>
+<section id="id10">
+<h2>第七章 部則<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>規約の改正
+第25条 本規約を改正するには、現役部員が起草し、総会において2/3以上の
+承認をもって決定する。</p>
+<p>請規則
+第26条 各係は各係によって決まり事を作り、都会の承認によって
+施行できる。</p>
+<p>第27条 部の規則を守る。また、規則を変えるときは総会において
+2/3以上の承認を得る。</p>
+</section>
+<section id="id11">
+<h2>贊助団体<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>第28条 本クラブの目的を賛助する団体を賛助団体という。
+但し、本クラブに対する一切の権利を持たない。</p>
+</section>
+<section id="id12">
+<h2>事故の責任<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>第29条 本クラブ並びにクラブは、個人の勝手な行動により起こった事故は一切の責任を負わない。</p>
+</section>
+</section>
+<hr class="docutils" />
+<section class="tex2jax_ignore mathjax_ignore" id="id13">
+<h1>琉球大学ダイビングクラブ部内規約<a class="headerlink" href="#id13" title="Link to this heading">#</a></h1>
+<p>（設立　昭和50年1月）</p>
+<p><strong>諸規則</strong></p>
+<ol class="arabic simple">
+<li><p>木曜の部会，日頃の活動において遅刻・欠席の多い者，また部に相応しくない者は，現役部員の最上級生の判断により処置をする。</p></li>
+<li><p>休部は現役部員の最上級生の判断に任せる。復帰後の扱いは話し合いの上で決める。</p></li>
+<li><p>1年生の間に部内スキンダイビング免許を取得しない者は退部とする。</p></li>
+<li><p>活動に遅刻した者は欠席とみなし活動には連れて行かない。</p></li>
+<li><p>潜水に関するアルバイトを行うには部内スキューバ免許を取得しなければならない。また，アルバイトに関して事前に誓約書を作成する。</p></li>
+<li><p>部の備品を活動以外で使用してはならない。</p></li>
+<li><p>年に1回の健康診断（心電図を含む）を受ける実施する。</p></li>
+</ol>
+<p>以上の規則を守らない者は部長の判断により処置をする。</p>
+<hr class="docutils" />
+<p>※付則
+本規則の適用に関しては1978年6月16日より効力を持つ。</p>
+<p>1980年12月　一部改正
+1985年12月　一部改正
+1987年04月　改正
+1987年12月　改正
+1992年04月　一部改正
+1992年12月　一部改正
+1994年04月　改正
+1995年04月　一部改正
+1995年12月　一部改正
+1996年12月　一部改正
+1997年12月　一部改正
+1999年04月　一部改正
+2000年04月　一部改正
+2006年12月　一部改正
+2008年05月　一部改正</p>
+<hr class="docutils" />
+<section id="id14">
+<h2>琉球大学ダイビングクラブ　重要禁止事項<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<p><strong>【ダイビング前】</strong></p>
+<ul class="simple">
+<li><p>ダイビング前24時間以内の飲酒は禁止</p></li>
+<li><p>ダイビング当日の薬の服用は禁止
+ただし，医師・薬剤師の許可があれば大丈夫（湿布❌）</p></li>
+<li><p>練習・合宿などの部員全員での活動以外はだいぶチェックに必要事項を記入しないとダイビングにいっては行けない！</p></li>
+<li><p>救急箱・お湯を持参しないとダイビングに行ってはいけない</p></li>
+<li><p>特別な場合を除き，必要な機材を1つでも忘れたら海に入ってはいけない</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>【ENからEXまで】</strong></p>
+<ul class="simple">
+<li><p>バディに一人は免許持ちがいなければ海に入ってはいけない</p></li>
+<li><p>単独でのダイビングの禁止</p></li>
+<li><p>日没が過ぎたらライトを持っていないとダイビングしてはならない</p></li>
+<li><p>ライトの電池毎回新品のものにしなければならない</p></li>
+<li><p>一度使用した電池は再度使用してはならない。</p></li>
+<li><p>陸番ライトがないとナイトダイビングに行ってはいけない。</p></li>
+<li><p>ナイトダイビングでは一人一個のライトを持たなければならない。</p></li>
+<li><p>EX時間を超えるダイビングをしてはいけない</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>【スキューバダイビング】</strong></p>
+<ul class="simple">
+<li><p>必ずダイブテーブルを引き，無減圧水域をはずしてはならない
+（バディ全員がダイブコンピュータを使用する場合はそれに従う）</p></li>
+<li><p>5m3分の安全停止をしなければならない</p></li>
+<li><p>残圧50を切ってはならない</p></li>
+<li><p>30m以降のダイビングの禁止</p></li>
+<li><p>ナイトスキューバの禁止</p></li>
+<li><p>スキューバダイビング中止後24時間以内の飛行機の搭乗，山越えドライブは禁止
+（ダイブコンピューターを使用して潜った場合はそれに従う）</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>【カメラ】</strong></p>
+<ul class="simple">
+<li><p>ナイトダイビングにカメラを持っていってはいけない</p></li>
+<li><p>カメラはバディに2つ以上持っていってはいけない</p></li>
+<li><p>練習以外の目的のダイビングのときにカメラを持っていってはいけない</p></li>
+</ul>
+<hr class="docutils" />
+<p>以上のものに違反した場合，部に適さないものとして退部処分もありうる。破った場合は事故報告書を書くこと。
+また，ここに定めたもの以外にも勉強冊子に明記されている禁止事項も存在するのでそれらも守ること。</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to  Jupyter Book</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2menkyo.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2.免許制度</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">1.部内部則</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">琉球大学ダイビングクラブ規約</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">第一章 総則</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">名称</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">第二章 部員</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">第三章 役員</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">第四章</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">第五章 入郎・休部・進部・除籍</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">第六章:経理</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">第七章 部則</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">贊助団体</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">事故の責任</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">琉球大学ダイビングクラブ部内規約</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">琉球大学ダイビングクラブ　重要禁止事項</a></li>
+</ul>
+</li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By U.R.D.C.琉大ダイビング部
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
