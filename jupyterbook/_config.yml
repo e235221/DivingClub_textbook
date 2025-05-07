@@ -46,9 +46,3 @@ repository:
   url: https://e235221.github.io/DivingClub_textbook/intro.html
   path_to_book: docs # Optional path to your book, relative to the repository root
   branch: master # Which branch of the repository should be used when creating links (optional)
-
-# MyST のディレクティブを明示的に有効化
-  #  parse:
-  #    myst_enable_extensions:
-  #      - admonition
-  #      - colon_fence
