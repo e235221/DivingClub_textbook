@@ -1,0 +1,693 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>11. 薬品とダイビング &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '11yakuhinn';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="12. トラブルの予防と処置(作成途中)" href="12toraburu.html" />
+    <link rel="prev" title="10. ログ" href="10log.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="0intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0intro.html">
+                    About US
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1kisoku.html">1.部内部則</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2menkyo.html">2.免許制度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3kizai.html">3.器材(作成する)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4skin.html">4. スキンダイビング</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5buddy.html">5. バディシステム</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="6env.html">6. 環境学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7point.html">7. ポイントについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8kagaku.html">8. 潜水の科学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9seiri.html">9.潜水の生理_figadd / なんかおかしい</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10log.html">10. ログ</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">11. 薬品とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12toraburu.html">12. トラブルの予防と処置(作成途中)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13sutoresu.html">13. ストレスとパニック(作成中)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14navi.html">14. ナビゲーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15rennshuu.html">15. 練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16night.html">16. ナイトダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17josei.html">17. 女性とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18kamera.html">18. カメラ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://e235221.github.io/DivingClub_textbook/intro.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://e235221.github.io/DivingClub_textbook/intro.html/issues/new?title=Issue%20on%20page%20%2F11yakuhinn.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/11yakuhinn.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>11. 薬品とダイビング</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">11.1 薬の特徴・副作用</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">11.2 薬以外で体に影響するもの</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">アルコール</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2. タバコ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3. カフェイン</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">4. 各種サプリメント</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">救急箱</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1>11. 薬品とダイビング<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p>私たちの生活に馴染みのある存在である薬ですが，ダイビングをするにあたっては危鵬なものとなっています。普段は身体の不調を抑え、和らげる為に薬を使用していますが，薬の中には副作用を起こすものもあり
+.を薬を服用してのダイビングが危険な事故や潜水障害を引き鼠こす可饂性もあり書す
+しかし、高圧下での薬の副作用は，漕潜水医学上未だ解明されていません。なので、何が起こるか分からないこともあり、体調が悪く薬を服用しなければならない状態の時は諦めてください！そして次に備えましょう！時には，諦める勇気も必要です。</p>
+<p>安全で楽しいダイビングをするために，項在分かっている薬品の特徴，副作用，種類，薬以外の体に影響するもの，そして海に行くときに必要なもの(救急箱)について，少し学んでみましょう！</p>
+<section id="id2">
+<h2>11.1 薬の特徴・副作用<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>点鼻薬</p></li>
+</ol>
+<p>風邪などで鼻が詰まったときに，鼻の通りを良くする薬。
+一時的には良くなるが、数時間後には再び詰まり，使いぎると作用しにくくなります。
+さらに…副作用でかえって鼻詰まりがひどくなります。また，鼻が詰まっていれば使うという依存性もあります。</p>
+<p>このため水中で薬の効果が切れてバニックになることも想定されます。鼻が詰まったままダイビングをすると，サイナスのスクイーズにかかったり、リパースブロックが起こったりする可籠性があります。
+※ 薬 = 飲むものだと思いがちですが、点鼻薬も立派な薬なので，注意しましょう。</p>
+<ol class="arabic simple">
+<li><p>抗ヒスタミン剤</p></li>
+</ol>
+<p>風邪や花粉症などの症状緩和のための薬です。</p>
+<p>(虫刺され薬(※)，日焼け止め(※)，酔い止め，蕁麻疹，皮膚科，鼻炎などに効く薬に配合。)人により，眠気などの鎮静・抗うつから不安・興奮作用まで，幅広く作用があると言われています。鼻アレルギーや花粉症で服用が必要な場合は，あらかじめ医師に相談しましょう。</p>
+<p>ただし，(※)は使用してもダイビングを行えます。</p>
+<ol class="arabic simple">
+<li><p>酔い止め</p></li>
+</ol>
+<p>酔い止めの薬は抗ヒスタミン剤系の製剤で何種類もあります。副作用としては，口の渇き，眠気，視力低下，便秘，高圧下においては極端な鎮静作用があげられます。これは，点鼻薬などよりも抗ヒスタミン剤が多いため，眠気が強く出ることもあります。とくに，「トラベルミン」という薬は効果が強く，常圧下であっても乗り物や機械類の運転操作の前には服用しないようにとの注意事項が書かれていて，ダイビング前の服用も当然禁止されています。</p>
+<ol class="arabic simple">
+<li><p>風邪薬</p></li>
+</ol>
+<p>市販されている風邪薬の多くは、抗ヒスタミン剤や解熱病類、ビタミンなどが複合された医薬品です。一般的な副作用には眠気やだるさ、頭が働かず集中力を欠くなどがあげられます。また、人によっては服用しても効果が出ないこともあるそうです。
+ダイビングをするにあたっても通常の服用時よりも相乗効果で強い作用が現れたり、思わぬ影響が出たりする恐れがあるので服用してはいけません！！</p>
+<ol class="arabic simple">
+<li><p>解熱鎮痛剤</p></li>
+</ol>
+<p>主に痛みを感じにくくさせる薬です。痛薬や痛み止めとして服用されるアスピリンが胃液分泌を増やし、血液凝固を阻害する恐れがあり、ダイビング中に最吐、中耳・副鼻腔スクイーズを起こした場合に出血が止まりにくくなることがあります。また，胃腸障害も起こす場合があります。風邪薬にも配合されている場合が多いので注意しましょう！市販されている物では、パファリンやイプがあります。関節や筋肉の痛みに使う湿布剤やスプレーなどにもインドメタシンなどの消炎鎮痛剤配合のものがあるので覚えておきましょう。</p>
+<ol class="arabic simple">
+<li><p>非ステロイド性抗炎症剤</p></li>
+</ol>
+<p>抗炎症作用、鎮痛作用、解熱作用がある薬剤で、生理痛薬にも含まれています。副作用としては皮膚過敏症、胃腸炎、肝障害、腸障害、気管支喘息、眠気，骨折の治療阻害、出血が止まりにくいなどがあります。</p>
+<ol class="arabic simple">
+<li><p>精神安定剤</p></li>
+</ol>
+<p>名前の通り精神状態を安定させ。イライラや不服の治療薬として用いられる薬です。眠気、判断ミス、思考力減退、肢体運動機能低下などの副作用があります。</p>
+<ol class="arabic simple">
+<li><p>栄養ドリンク</p></li>
+</ol>
+<p>体の疲れや風邪気味に感じた時に飲むと体調が良くなり、元気になるものです。多くが医薬部外品ですが、医薬品も存在するのでラベルをしっかり見て、ダイビング前は注意して飲みましょう！！</p>
+<ol class="arabic simple">
+<li><p>漢方薬</p></li>
+</ol>
+<p>漢方薬もれっきとした薬です！複数の生薬ををあらかじめ組み合わせた処方薬を指します。基本的に副作用はないとされていますが、人によって合う合わないがあり、ダイビングにどのように影響するかわからないため、ダイビング当日は服用をしてはいけません。</p>
+</section>
+<section id="id3">
+<h2>11.2 薬以外で体に影響するもの<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+</section>
+<section id="id4">
+<h2>アルコール<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>1）アルコール</p>
+<p>アルコール飲料（エタノール）を摂取すると人間は酔います。酔いにはエタノールによる脳の麻痺と，体内でのエタノール分解の過程で生じるアセトアルデヒドの毒性による酔いとの二種類があります。</p>
+<p>エタノールの場合，中枢神経を抑制する働きがあるため，異常が助長されてとても楽しくなります。また，血液中のアルコールの濃度が上昇するにつれ，運動や言語を司る神経系にも抑制が掛かり，頭が働かなくなるため，運動の反射時間の延長や刺激への無反応が生じ，海では危険です。少量であっても循環を促進させ，ダイビング中組織に多くの窒素を吸収させ<strong>窒素酔い</strong>（※「スキューバ」参照）になりやすくします。</p>
+<p>また，アルコールは毛細血管を拡張させ，気泡の形成を促進し，<strong>減圧症</strong>（※「スキューバ」参照）にかかりやすくなります。なので，潜水後の飲酒でのアルコール摂取も好まくありません。</p>
+<p>その他にもアルコールには<strong>血管拡張作用</strong>と<strong>脱水作用</strong>があります。飲酒により血管が拡張すると，血液循環の促進により体温が低下するため<strong>低体温症（ハイポサーミア）</strong>（※「清水の生理」参照）を誘発します。そして，体温保持のために毛細血管への血液を抑制するので窒素の排出が飲酒していない場合と比べて遅くなります。また，脱水作用によって血中の水分量が少なくなり血液の粘度が上がると，スムーズに血液循環がでいなくなり，窒素の排出が遅くなります。</p>
+<p>このように血液循環が悪くなることによって，窒死の排出が遅くなり窒素酔いや減圧症にかかりやすくなります。さらに水圧によって体内に残っているアルコール作用が強まる可能性もあります。</p>
+<p>1気圧の地上では酔いが進んでいるように見えても，高圧になる水中では血中アルコール濃度が上昇し，泥酔状態になり中枢神経が麻痺し，平衡感覚がなくなる可能性があり危険です。</p>
+<p>※これらの要素が事故に繋がることがあります。そのため，URDCでは潜水前24時間以内と潜水直後の飲酒を禁止しています。また，ダイビング時に関わらず薬とアルコールの同時摂取は避けましょう。</p>
+<hr class="docutils" />
+</section>
+<section id="id5">
+<h2>2. タバコ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>喫煙により，ダイビングをしていても息が乱れやすい，耳抜きをしにくい，船酔いしやすいなどの影響が出るといわれています。</p>
+<p>タバコに含まれるニコチンは毛細血管を収縮させ血流を減少させます。これにより体温も低下しやすくなります。</p>
+<p>ニコチンを過剰摂取した場合，嘔吐・下痢・妄想・幻覚・錯乱などの症状が現れることもあり，場合によっては死亡することもあります。</p>
+<p>よく話される症状の発現例としては，肺にあるヘモグロビンと一酸化炭素が結合</p>
+<p>タバコの煙に含まれる一酸化炭素は，酸素よりもヘモグロビンと結合しやすく，末端への酸素供給能力を低下させます。</p>
+<p>これによりスキューバではエアーの消費が早くなり，酸欠による頭痛を引き起こすかもしれません。減圧症になった場合は酸素吸入を受ける際の治療効率も悪くなります。</p>
+<p>たった一本タバコを吸うだけでも速攻で気道が刺激され収縮し，空気の流れを阻害し肺が膨張障害になるリスクが高くなります。また，タバコを吸って喘息にあり気管支が発作的に痙攣して塞がってしまうと呼吸困難になります。この発作が水中で起きると窒息状態になり，息ができません。慌てて浮上すると肺の中の空気が膨張しても出すことができないため肺破裂を起こす危険が大きいです。また，ニコチンの影響で心臓発作のリスクが高くなり，特に水温の低い季節や海域でのダイビングは危険です。発作は運動や寒冷・海水の刺激で起こることがあり，いつ起こるかわからないため万が一発作が起きると非常に危険です。</p>
+<p>「ダイビング前後2~3時間はタバコを吸わない方が良い」などと聞いたことがあるかもしれませんが，実際には一酸化炭素を体内から取り除くためには10〜12時間が必要です。なので，ダイビングをする日は吸わないことで，減圧症や肺の過膨張障害におけるリスクを減らすことができます。</p>
+<p>ニコチンによる禁断症状は精神の不安定を招くことがあります。できる限り禁煙しましょう。</p>
+</section>
+<section id="id6">
+<h2>3. カフェイン<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>カフェインは主にコーヒー・紅茶・ココア・ガラナに含まれます。主な作用は覚醒作用，脳細動脈収縮作用，利尿作用です。医薬品にも使われ，眠気・倦怠感・頭痛などに効果があります（鎮痛薬持ちでコーヒーを飲むと治るという人がいる）。</p>
+<p>副作用として不眠・めまい・手の震えが現れることがあります。</p>
+<p>カフェインを習慣的に摂取している人が半日から1日カフェインを摂取しなかったときに現れる症状として最も顕著であるのは頭痛であり，その他，不安・抑うつ・疲労感・集中力の欠如が現れることがあります。また，心筋に直接作用することによって，収縮増大・拍数増加・拍出量増大などを起こし，大量摂取には不整脈が現れることもあります。</p>
+<p>※カフェインの利尿作用によって体の水分がぬけたり，血液の粘性が高まり，窒素の排出が悪くなります。よって，減圧症にかかりやすくなる可能性もあります。</p>
+</section>
+<section id="id7">
+<h2>4. 各種サプリメント<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>ほとんどのサプリメントや栄養ドリンクは医薬部外品なので，ダイビング前に摂取</p>
+<p>しても構いませんが，なかには医薬品も含まれているので注意してください。</p>
+<hr class="docutils" />
+<p>※これらの薬・アルコール・タバコ・カフェインはダイビングをする上での危険因子</p>
+<p>となります。これらには<strong>習慣依存性</strong>があるので，ダイビングをするときは気をつけましょう。</p>
+</section>
+<section id="id8">
+<h2>救急箱<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p><strong>1. 薬品</strong></p>
+<ul class="simple">
+<li><p><strong>消毒液</strong></p>
+<ul>
+<li><p>マキロン</p></li>
+<li><p>0.1〜0.2％リバノール液（粘膜消毒液）</p></li>
+<li><p>3％オキシドール（小さい泡が異物を追い出す）</p></li>
+<li><p>酸性石鹸（手を洗う時に使う）</p></li>
+<li><p>70％アルコール（100％より殺菌効果）</p></li>
+</ul>
+</li>
+<li><p><strong>湿布薬</strong></p>
+<ul>
+<li><p>冷湿布，温湿布</p></li>
+</ul>
+</li>
+<li><p><strong>塗り薬</strong></p>
+<ul>
+<li><p>抗ヒスタミン軟膏（ムヒ），日焼け止め，ローション</p></li>
+</ul>
+</li>
+<li><p><strong>内服薬</strong></p>
+<ul>
+<li><p>解熱鎮痛剤（バファリン），整腸剤（ビオフェルミン），便秘薬（正露丸）</p></li>
+<li><p>酔い止め</p></li>
+<li><p>目薬（目に異物が入ったときのため）</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>2. 器具</strong></p>
+<ul class="simple">
+<li><p>体温計，ハサミ，ピンセット，毛抜き，ナイフ（水中ナイフではなく簡単なもの）</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>3. 資材</strong></p>
+<ul class="simple">
+<li><p>包帯，脱脂綿，ガーゼ，斜網香，油紙（救急用防水止）</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>4. その他</strong></p>
+<ul class="simple">
+<li><p>紙テープ，保険証のコピー（万が一事故が起きたときのため），お湯，酢（5％）</p></li>
+<li><p>包帯止め，吸引器，危険生物の冊子，ゴム手袋</p></li>
+</ul>
+<p>その他にも，救急教本，筆記用具，ペンライト，安全ピン，小銭，ライター，テーピングテープ，綿棒，輪ゴム，生理用品，ビニール袋，ペットボトル，常備薬など，各自必要だと思うものを準備します。また，薬の有効期限もこまめにチェックしましょう。</p>
+<hr class="docutils" />
+<p>※ 配車を出す人が必ず揃えるもの</p>
+<p>マキロン，3％オキシドール，酸性石鹸，70％アルコール，抗ヒスタミン軟膏，体温計，ハサミ，ピンセット，毛抜き，脱脂綿，ガーゼ，絆創膏，紙テープ，お湯，酢，吸引器，危険生物冊子，ゴム手袋，ペットボトル</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="10log.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">10. ログ</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="12toraburu.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">12. トラブルの予防と処置(作成途中)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">11.1 薬の特徴・副作用</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">11.2 薬以外で体に影響するもの</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">アルコール</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2. タバコ</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3. カフェイン</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">4. 各種サプリメント</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">救急箱</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By U.R.D.C.琉大ダイビング部
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,964 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9.潜水の生理_figadd / なんかおかしい &#8212; My Jupyter Book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '9seiri';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="10. ログ" href="10log.html" />
+    <link rel="prev" title="8. 潜水の科学" href="8kagaku.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="0intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="My Jupyter Book - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="My Jupyter Book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="0intro.html">
+                    About US
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1kisoku.html">1.部内部則</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2menkyo.html">2.免許制度</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3kizai.html">3.器材(作成する)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4skin.html">4. スキンダイビング</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="5buddy.html">5. バディシステム</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="6env.html">6. 環境学</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7point.html">7. ポイントについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8kagaku.html">8. 潜水の科学</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9.潜水の生理_figadd / なんかおかしい</a></li>
+
+<li class="toctree-l1"><a class="reference internal" href="10log.html">10. ログ</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11yakuhinn.html">11. 薬品とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12toraburu.html">12. トラブルの予防と処置(作成途中)</a></li>
+
+
+
+<li class="toctree-l1"><a class="reference internal" href="13sutoresu.html">13. ストレスとパニック(作成中)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14navi.html">14. ナビゲーション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15rennshuu.html">15. 練習</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16night.html">16. ナイトダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17josei.html">17. 女性とダイビング</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18kamera.html">18. カメラ</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://e235221.github.io/DivingClub_textbook/intro.html" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://e235221.github.io/DivingClub_textbook/intro.html/issues/new?title=Issue%20on%20page%20%2F9seiri.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/9seiri.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>9.潜水の生理_figadd / なんかおかしい</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">9.潜水の生理_figadd / なんかおかしい</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.1. スクイーズ（締め付け）</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.1.1. 耳のスクイーズ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">9.1.2. 鼻のスクイーズ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">9.1.3.鼻血について</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">9.1.4. 肺のスクイーズ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">9.1.5. マスクのスクイーズ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">9.1.6. マスクブロー</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9.2. リバースブロック</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">9.2.1.耳のリバースブロック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">9.2.2. 鼻のリバースブロック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">9.2.3. 歯のリバースブロック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">9.2.4. 胃腸のリバースブロック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">9.2.5. 肺のリバースブロック(重要)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">＜肺破裂による障害＞</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">1. 空気塞栓症（エア・エンポリズム）</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2. 気胸</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">3. 縦隔(洞)気腫</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">4. 皮下気腫</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">9.3 ハイパーベンチレーション</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ハイパーベンチレーションがなぜ危険なのか。</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">9.4 シャローウォーターブラックアウト</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">ブラックアウトの前兆</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ブラックアウトの予防と処置</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">9.5 その他の障害</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">9.5.1 低体温症(ハイポサーミア)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">9.5.2 日射病・熱射病（オーバーヒート）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">禁止事項</a></li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="figadd">
+<h1>9.潜水の生理_figadd / なんかおかしい<a class="headerlink" href="#figadd" title="Link to this heading">#</a></h1>
+<blockquote>
+<div><p>水中は，陸上と比べて圧力の変化が大きく，私たちの体にかかる圧力が急速に大きくなったり小さくなったりします。そのため，体内の気体の体積が変化し，それによって障害が起こることがあります。この障害はスクイーズ・リバースブロック・その他の障害の大きく3つに分類することができます。 これから体内の体積変化によって生じる体への症状を見ていきましょう</p>
+</div></blockquote>
+<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>スクイーズ</strong>
+水中に潜降すると，体内にある空間と，外部の圧力に差が生じます。この差によって，内部と外部の境界となっている組織が引っ張られて，違和感や痛みを生じます。これをスクイーズといいます。</p>
+<p><strong>リバースブロック</strong>
+水面へ浮上しているとき，体にかかる水圧が減少するのに伴って，体内の空間の気体の体積が増え，空間の壁となっている組織が押され，痛みを生じます。これがリバースブロックと呼ばれる障害で，スクイーズとは逆のメカニズムで起こるものです。</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">水中での圧力の変化</p>
+<p>例えば，地上では海抜約3,500mまでいくと，気圧が0.3気圧変化するが，水中ではわずか3m潜っただけで0.3気圧変化します。
+<img alt="水中での圧力の変化" src="9%20%E6%BD%9C%E6%B0%B4%E3%81%AE%E7%94%9F%E7%90%86_figadd%20427c320535f54e0aa55ae28250456207/Adobe_Scan_%25E4%25BB%25A4%25E5%2592%258C6%25E5%25B9%25B45%25E6%259C%258824%25E6%2597%25A5.jpg" /></p>
+<figure class="align-default" id="fig-pressure-in-water">
+<a class="reference internal image-reference" href="_images/pressure_in_water.jpg"><img alt="_images/pressure_in_water.jpg" src="_images/pressure_in_water.jpg" style="width: 600px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">水中での圧力の変化</span><a class="headerlink" href="#fig-pressure-in-water" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</div>
+<section id="id1">
+<h2>9.1. スクイーズ（締め付け）<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>潜降すると，体外と体内の気圧に圧力差が生じます。この差によって，壁となっている組織が引っ張られ，違和感や痛みを覚えることがあります。この現象をスクイーズと言います。</p>
+</div></blockquote>
+<section id="id2">
+<h3>9.1.1. 耳のスクイーズ<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>人間の耳は，下図のような構造になっています。外耳と中耳の間には鼓膜があり，外耳と中耳を隔てています。潜降すると，水圧がかかってきて，鼓膜が体の内側に引っ張られ，耳に違和感を覚えます。これを中耳腔スクイーズといいます。違和感を解消するために，潜降するときは耳抜きをします。</p>
+<p>痛みを感じた後も耳抜きをせずに潜降を続けると，圧力に耐えきれなくなって鼓膜が破れ，耳の内側に海水が流れ込みます。この急な水の侵入によって神経がショックを起こし，めまいを起こしたり，中耳炎などの感染症にかかったりする危険性があります。また，海水によって三半規管が冷やされると，平衡感覚を失う危険性もあります。</p>
+<p>外耳の中に耳をを塞ぐもの（フード・耳栓・耳垢など）があると，鼓膜との間にある気体が圧縮されることで，鼓膜が体外側に引っ張られ，ひどい場合には破れてしまいます。これが外耳のスクイーズです。これが起こると，耳からの出血や耳の痛みがします。</p>
+<figure class="align-default" id="fig-ear-structure">
+<a class="reference internal image-reference" href="_images/Ear_structure.gif"><img alt="_images/Ear_structure.gif" src="_images/Ear_structure.gif" style="width: 500px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">耳の構造</span><a class="headerlink" href="#fig-ear-structure" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>出典：<a class="reference external" href="http://www.tanaka-ent.or.jp/mimi-kozo.html">http://www.tanaka-ent.or.jp/mimi-kozo.html</a></p>
+<figure class="align-default" id="fig-ear-squeeze">
+<a class="reference internal image-reference" href="_images/ear_squeeze.gif"><img alt="_images/ear_squeeze.gif" src="_images/ear_squeeze.gif" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">耳のスクイーズ</span><a class="headerlink" href="#fig-ear-squeeze" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<p>潜降したときは，耳に違和感が生じる前からこまめに<a class="reference internal" href="#4%20%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BF%E3%82%99%E3%82%A4%E3%83%92%E3%82%99%E3%83%B3%E3%82%AF%E3%82%99(%E5%AE%8C%E6%88%90)%2034401e0608014c52b57dac94d293401a.md"><span class="xref myst">耳抜き</span></a>を行う。違和感があったり，違和感が消えないときは，無理な耳抜きはせずに浮上する。片方だけ抜けていない場合は，抜けていない方の耳を上に向けて耳抜きをしてみる。それが抜けないのなら浮上する。</p>
+<ul class="simple">
+<li><p>眩暈がする場合は，岩などで固定されたものにつかまり，ゆっくり浮上する。</p></li>
+<li><p>ダイビングをするときは耳栓をしない。また，耳掃除は定期的に行う。</p></li>
+<li><p>アレルギー性鼻炎の人や，鼻が詰まっている人などはスクイーズが起きやすいので注意し，陸チェックのときにバディへ伝えておく。</p></li>
+</ul>
+</div>
+</section>
+<section id="id3">
+<h3>9.1.2. 鼻のスクイーズ<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>鼻のスクイーズは，目の後ろにある副鼻腔（サイナス）という空洞の圧力変化によって起こる現象です。副鼻腔は4対あり，普段これらは鼻腔（鼻の穴の内側）と繋がっていますが，その気管はとても細く，鼻炎のときや気管が炎症を起こしてしまっているときなどは塞がってしまい，空気の入れ替えが十分にできなくなります。この状態のときに潜降すると，副鼻腔内の気体の圧力と外圧に差が生じ，スクイーズを起こします。</p>
+<p>スクイーズが起こると，目や額の裏側が痛くなったり，目が充血したりします。</p>
+<figure class="align-default" id="fig-nose-squeeze">
+<a class="reference internal image-reference" href="_images/nose_squeeze.png"><img alt="_images/nose_squeeze.png" src="_images/nose_squeeze.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">鼻のスクイーズ</span><a class="headerlink" href="#fig-nose-squeeze" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>鼻のスクイーズ</p>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置（スキューバ時）</p>
+<ul class="simple">
+<li><p>サイナスが痛くなってきたら，すぐにバディにいってExする。よく痛くなる人は陸チェックのときにバディに言っておく。</p></li>
+<li><p>疲れているときや，風邪・鼻炎・寝不足などの症状が出ているときはサイナスのスクイーズになりやすいので，前日はよく寝て体調管理をきちんとする。</p></li>
+<li><p>サイナス・スクイーズになったら，極力時間をかけて浮上する。</p></li>
+<li><p>眉間や頬・鼻の上あたりに痛みを感じたら潜らない。</p></li>
+</ul>
+</div>
+</section>
+<section id="id4">
+<h3>9.1.3.鼻血について<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>潜降中に副鼻腔の圧力調整がうまくできないと，副鼻腔の内側の組織が破れて鼻血が出てくることがあります。鼻血は外に出てしまったら問題ないですが，中で溜まってしまうと感染症にかかってしまう可能性があります。Ex後も頭痛や頬の奥の痛みが続くようなら，副鼻腔が炎症を起こしていたり，副鼻腔自体に損傷が見られたりするかもしれないので，病院へ行きましょう。</p>
+</section>
+<section id="id5">
+<h3>9.1.4. 肺のスクイーズ<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>空気を吐いた状態で潜降すると，肺内の空気はどんどん収縮していき肺が縮んでいきます。そして，限界を超えると肺が形を維持できなくなって損傷してしまいます。</p>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<ul class="simple">
+<li><p>息を吸ってから潜降する。途中で息を吐かない！</p></li>
+<li><p>息を吐いてしまった場合は，それ以上深く潜らずにゆっくり浮上する。</p></li>
+</ul>
+</div>
+</section>
+<section id="id6">
+<h3>9.1.5. マスクのスクイーズ<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>潜降していくと，マスク内の空気が圧力によって収縮し，マスクが顔に張り付いてしまいます。そのままにしておくと，マスクの跡が顎にくっきり残ったり目が充血することがあるので，注意が必要です。これを解消するためにマスクブローをしましょう。</p>
+</section>
+<section id="id7">
+<h3>9.1.6. マスクブロー<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>マスクが顔に張り付いてくる違和感を取り除くための技術です。鼻から空気を少し吐いて，マスクの中に空気を送り込みます。</p>
+<p><img alt="マスクブロー（出典：https://www.net-diver.org/web_support/program/skin/p10.htm）" src="https://www.net-diver.org/web_support/program/skin/image/image64.gif" /></p>
+<p>マスクブロー（出典：<a class="reference external" href="https://www.net-diver.org/web_support/program/skin/p10.htm">https://www.net-diver.org/web_support/program/skin/p10.htm</a>）</p>
+<p><img alt="マスクブロー（出典：https://www.net-diver.org/web_support/program/skin/p10.htm）" src="https://www.net-diver.org/web_support/program/skin/image/image65.gif" /></p>
+<p>マスクブロー（出典：<a class="reference external" href="https://www.net-diver.org/web_support/program/skin/p10.htm">https://www.net-diver.org/web_support/program/skin/p10.htm</a>）</p>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<ul class="simple">
+<li><p>マスクブローする。</p></li>
+<li><p>鼻が詰まっている場合は，マスクブローしにくいので気を付ける。</p></li>
+<li><p>鼻まで覆われていないゴーグルなどは，潜水したときマスクブローができないので，ダイビングのときゴーグルは使用しない。</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="id8">
+<h2>9.2. リバースブロック<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><p>水中では圧力の変化が大きく，それによって様々な障害が生じる。代表的にものがリバースブロックである。浮上して水深が浅くなると，空気の体積が大きくなる。（浅いと体積変化は大きくなる。）</p>
+</div></blockquote>
+<section id="id9">
+<h3>9.2.1.耳のリバースブロック<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>浮上中に内耳内の圧力が外耳の圧力よりも高くなり，鼓膜を外に押し出そうとして耳が痛みます。この力が大きくなり，鼓膜が破れるとめまいを起こし大変危険です。</p>
+<p>めまいは潜水中に生じる最も危険なもので，ダイバーは水中でバランス感覚を失い，方向感覚を喪失します。その結果，浮上しようにも水面の方向がわからなくなり，さらに吐き気が強くなり，嘔吐することもあります。このような状況下では，初心者でなくてもパニックに陥り易く，慌てて浮上して減圧症になることもあります。（スキューバダイビング時）浮上時，内耳内の圧力と外耳の圧力が釣り合っていれば問題ありません。原則として耳抜きがうまくできていないときに起こります。</p>
+<figure class="align-default">
+<img alt="_images/reverseblock.gif" src="_images/reverseblock.gif" />
+</figure>
+<p>出典：<a class="reference external" href="https://www.net-diver.org/selftraining/manual/p71-2.htm">https://www.net-diver.org/selftraining/manual/p71-2.htm</a>）</p>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<ul class="simple">
+<li><p>リバースブロックが発生したときは，極力低速度で浮上する。</p></li>
+<li><p>フード着用時は，圧平衡がとりにくくなるので注意する。</p></li>
+<li><p>体調がすぐれないときは，ダイビングを控える。</p></li>
+<li><p>鼓膜に痛みが起きるようであれば，痛みを感じなくなる深さまで戻り，顎を前後に動かしたり，唾を飲み込んだり鼻をつまんで息を吸う動作をしてゆっくり浮上する（スキューバ時）</p></li>
+</ul>
+</div>
+</section>
+<section id="id10">
+<h3>9.2.2. 鼻のリバースブロック<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>眉間の上部分に膨張感，圧迫感があり痛みます。痛いからといって焦って浮上すると，空気の膨張の速度が急激になるため，かえってもっと痛くなってしまいます。</p>
+</section>
+<section id="id11">
+<h3>9.2.3. 歯のリバースブロック<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>歯のスクイーズと同様に，虫歯治療などの詰め物と歯の間に空間があれば，空間内の内圧と外圧の差によって歯茎が腫れたり傷んだりします。歯や治療剤は割れることもあります。スクイーズより頻度は少ないです。</p>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<ul class="simple">
+<li><p>治療する箇所に空間をつくらないようにしてもらいます。</p></li>
+</ul>
+</div>
+</section>
+<section id="id12">
+<h3>9.2.4. 胃腸のリバースブロック<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>ガスの出やすい食物を食べることにより胃腸でガスが発生し，そのガスが浮上中に膨張することで起こり，腹部が痛みます。主にスキューバで起こります。</p>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<ul class="simple">
+<li><p>ダイビング前にガスの出やすいものを摂取しないようにしましょう。（さつまいも，キャベツ，牛蒡など繊維の多いもの）</p></li>
+<li><p>空気を飲んだらゲップするようにしましょう。</p></li>
+</ul>
+</div>
+</section>
+<section id="id13">
+<h3>9.2.5. 肺のリバースブロック(重要)<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>肺のリバースブロックは肺破裂が起こり，それに起因した様々な障害を引き起こす。主にスキンダイビング中にスキューバダイバーからエアーをもらったり，水中洞窟の空気を吸ってそのまま浮上したときに発生する。</p>
+<p>では，なぜ<strong>スキンダイビング中にスキューバダイバーからエアーをもらったり，水中洞窟の空気を吸ってそのまま浮上してはいけない</strong>のでしょうか？</p>
+<p>スキューバダイビングのエアーは圧縮されてタンクに入っています。また，水中洞窟の空気は高い水圧を受けて収縮しています。水深が深くなるにつれて，水圧も高くなります。水圧が高くなるにつれて空気は収縮します。逆に水圧が浅くなるにつれて水圧は低くなり，空気は膨張します。</p>
+<p>そして，スキンダイビング中に水中でそれらの圧縮された空気を吸って浮上すると，その肺内の空気は水深が浅くなるにつれてどんどん膨張し，肺の体積の許容量を超えて肺破裂が起こってしまいます。ちなみに，肺は大気圧下のたった4.14倍を超えると破裂してしまいます。</p>
+<figure class="align-default">
+<img alt="_images/lung_reverse_block.jpeg" src="_images/lung_reverse_block.jpeg" />
+</figure>
+<section id="id14">
+<h4>＜肺破裂による障害＞<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<section id="id15">
+<h5>1. 空気塞栓症（エア・エンポリズム）<a class="headerlink" href="#id15" title="Link to this heading">#</a></h5>
+<p>肺胞の破損により，漏れ出た空気が毛細血管に入り込み血流を止めてしまい，それより先の組織に血液が行き渡らなくなります。空気が詰まる場所によっては症状が変わります。</p>
+<p>※ スキューバ時，正しい潜水でも咳が出ていたり，風邪をひいたりしていると呼吸が乱れて息が止まり易くなるため，空気塞栓症が起こることがあります。</p>
+<p>＜症状＞：通常，浮上後5分以内に起こります。鼻や口から血の混じった泡が出たり，めまい・麻痺・胸痛・言語障害・意識不明・呼吸困難・呼吸停止・心停止が起こり，死に至る場合があります。</p>
+</section>
+<section id="id16">
+<h5>2. 気胸<a class="headerlink" href="#id16" title="Link to this heading">#</a></h5>
+<p>肺は胸腔という部屋の中に，はまるようにして浮かんでいます。<strong>肺破裂により空気が漏れると胸腔に空気がたまって，肺が潰れて小さくなります</strong>。この状態を気胸といいます。</p>
+<p>＜症状＞：咳・息切れ・胸痛・チアノーゼ症状（血中の酸素が欠乏して，皮膚や粘膜が青ざめること。唇が紫色になり，爪が白くなるなどの症状），漏れた空気が心臓を圧迫して心停止を起こすこともあります。</p>
+</section>
+<section id="id17">
+<h5>3. 縦隔(洞)気腫<a class="headerlink" href="#id17" title="Link to this heading">#</a></h5>
+<p><strong>漏れた空気が</strong>気管支や血管に沿って<strong>胸の縦隔にたまり</strong>，心臓や血管を圧迫して<strong>循環の妨げをします。</strong></p>
+<p>＜症状＞：胸痛・呼吸困難・意識障害・変声などがあります。</p>
+<p>cf. <a class="reference external" href="https://www.kango-roo.com/learning/8258/">https://www.kango-roo.com/learning/8258/</a></p>
+</section>
+<section id="id18">
+<h5>4. 皮下気腫<a class="headerlink" href="#id18" title="Link to this heading">#</a></h5>
+<p>肺の損傷により鎖骨や首周辺などの皮下組織内に空気が溜まった状態をいいます。しばしば縦隔(洞)気腫と同時に起こります。</p>
+<p>＜症状＞：変声，首の周りが腫れる，ものを飲み込むことが困難になります。</p>
+<p>cf. <a class="reference external" href="https://www.kango-roo.com/learning/8191/#8">https://www.kango-roo.com/learning/8191/#8</a></p>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<ul class="simple">
+<li><p>スキンダイビングで潜降中にスキューバダイバーからエアーをもらったり，水中洞窟の空気を吸って浮上しない。</p></li>
+<li><p>もしスキンダイビング中にエアーを吸ってしまったら，<strong>上を向き気道確保をしっかり行い，「アー」と声を大きくして浮上する</strong>。（息を徐々に吐きながら，肺内の空気が多すぎても少なすぎでもない状態を保つ。）<a class="reference external" href="https://www.owd.jp/skill/openwater-skill/cesa/">cf.</a></p></li>
+<li><p>スキューバ中に息を止めない。呼吸を止めたまま浮上しない。普通に呼吸をしていれば肺の過膨張は起こらない。水中では常に呼吸を続けるように習慣づける。</p></li>
+<li><p>スキンダイビング中に息を吐かない。肺の体積が小さすぎると，肺内の気道を潰し，肺胞が閉鎖され，リバースブロックを起こすこともある。（→[肺のスクイーズ]</p></li>
+<li><p>浮上はゆっくり行う。空気の膨張率は浅いところのほうが高くなるので，わずかな水深差でも空気が大きく膨張し，浮力も大きくなるので浮上速度も速くなる。そうなると，空気の排出が遅れ，肺破裂を起こし易くなるので注意する。</p></li>
+<li><p>肺破裂を起こしてしまったら，すぐに再圧チャンバー施設のある病院や医療施設に行く。そこで体内に発生した気泡を小さくする再圧治療を行う。</p></li>
+<li><p>沖縄県内では，琉大附属病院，南部特仲介病院，沖縄セントラル病院，北部地区医師会病院の4つ。</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="id19">
+<h2>9.3 ハイパーベンチレーション<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<p><a class="reference internal" href="#4%20%E3%82%B9%E3%82%AD%E3%83%B3%E3%82%BF%E3%82%99%E3%82%A4%E3%83%92%E3%82%99%E3%83%B3%E3%82%AF%E3%82%99(%E5%AE%8C%E6%88%90)%2034401e0608014c52b57dac94d293401a.md"><span class="xref myst">ハイパーベンチレーションをしない。</span></a></p>
+<p>ベンチレーション：空気の入れ替えを意味している。</p>
+<p>つまり，深く速い呼吸をすることで，意識的に肺の中の空気を入れ替えて，脳を誤魔化し，普段よりも長い潜水を可能にするスキンダイビングのテクニックである。</p>
+<p>疲れなどで，無意識に呼吸が荒くなってしまい起こる状態を指す場合もある。</p>
+<section id="id20">
+<h3>ハイパーベンチレーションがなぜ危険なのか。<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<blockquote>
+<div><p>息を止めている間 = CO₂は増加</p>
+<p>血液中のCO₂量が一定量を超える = 脳がこれを感知して「呼吸を再開しろ」と命令を出す ⇒息苦しいと感じる。</p>
+<p>つまり，息苦しいと感じる原因は，二酸化炭素の増加である。</p>
+</div></blockquote>
+<p>⇔呼吸が止められて意識を失うのは全く別の話である。</p>
+<blockquote>
+<div><p>私たちが息を止めている間，二酸化炭素は増加していく⇔酸素は消費されて，酸素の量は減少していく。</p>
+<p>そして，血液中の酸素が一定量を下回ると，脳が酸欠状態になり，意識を失ってしまいます。</p>
+<p>つまり，私たちが意識を失う原因は，酸素の減少です。</p>
+</div></blockquote>
+<p>⇒　息苦しいと感じた時に呼吸を再開すれば，意識を失わず，なんの障害も起こりません。</p>
+<p>ハイパーベンチレーションをする</p>
+<p>⇒肺の中の酸素分圧が少し上昇し，二酸化炭素分圧は大きく減少</p>
+<p>つまり，血液中の二酸化炭素の量は減るので，苦しくなるまでの時間が長くなり，その間は息苦しさを感じない</p>
+<p>⇒普段より長く息を止めることができる。</p>
+<p>⇔息を止めている間，酸素はどんどん消費されていく。</p>
+<p>⇒酸素が減っていって，脳が酸欠間近に</p>
+<p>⇒意識保持の限界点を超えるとき==本人が息苦しさを感じていない==</p>
+<p><strong>（脳が酸欠間近まで潜ったとき）</strong>：浮上時に意識を失うことがある。『シャローウォーターブラックアウト』</p>
+<p>（<strong>血液中の二酸化炭素が減少）</strong>：めまい，しびれ，痙攣などが起こる低体温症（ハイポサーミア）が生じる危険性もある。</p>
+<p>以上より，ハイパーベンチレーションを禁止している。</p>
+<figure class="align-default">
+<img alt="_images/Hyperventilation.jpeg" src="_images/Hyperventilation.jpeg" />
+</figure>
+<p>ref. <a class="reference external" href="https://www.hopkinsmedicine.org/health/conditions-and-diseases/hyperventilation">Hyperventilation</a></p>
+</section>
+</section>
+<section id="id21">
+<h2>9.4 シャローウォーターブラックアウト<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<p>ハイパーベンチレーションの項でも触れたように，シャローウォーターブラックアウトとは水面に達する前に目の前が真っ暗になり意識を失う現象です。ハイパーベンチレーションや無理なイキゴラ絵をすると起こることがあります。これは浮上すると水圧の低下とともに肺の中の酸素分圧もさらに減少するために起こります。</p>
+<p>部内では過去に3件発生し，いずれも命に別状はなかったが，数日間の入院を必要しました。</p>
+<section id="id22">
+<h3>ブラックアウトの前兆<a class="headerlink" href="#id22" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>明るいはずの水面が暗く感じる</p></li>
+<li><p>空がピンクに見える</p></li>
+<li><p>視界に霞がかかったように見える</p></li>
+<li><p>視界に星が飛んでいるように見える</p></li>
+</ul>
+<p>⇒これらの症状が出たら，即バディに報告すること。</p>
+</section>
+<section id="id23">
+<h3>ブラックアウトの予防と処置<a class="headerlink" href="#id23" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>ハイパーベンチレーションをしよう【禁止事項】</p></li>
+<li><p>無理な息ごらえをしない【禁止事項】</p></li>
+</ul>
+<p>（慣れるまでバブリング(:水中で息を細く吐くこと)も注意）</p>
+<ul class="simple">
+<li><p>バディシステムを守って潜る。単独ダイビングはしない【重要禁止事項】</p></li>
+<li><p>潜水が長いときは，バディをしっかり見守る。</p></li>
+<li><p>普段よりも声が高かったり，しゃべりたがっている時は注意する。</p></li>
+<li><p>水中で絶対に吐いてはならない（吐いたら楽にはなる）バディが浮上中に息を吐いていたら，ブラックアウトの可能性があるので，すぐに潜って助けに行く。</p></li>
+<li><p>手に痺れを感じたら，ハイパーベンチレーションの状態の可能性があるので，潜らないようにする。</p></li>
+<li><p>シュノーケルを外して浮上すると，意識を失ったとしても水を飲まないで済む</p></li>
+<li><p>ブラックアウトを起こしたときのレスキュー</p>
+<ul>
+<li><p>すぐに引き上げて水平にし，気道確保。呼吸していなければ，人工呼吸を行い，速やかにう病院に運ぶ。意識があったり，大丈夫だといっていても，肺に水が入っている可能性があるので，絶対に病院についていく</p></li>
+</ul>
+</li>
+<li><p>(ブラックアウト時)　水が入らないように無意識に口を閉じてしまうので，しっかりと開けさせる。</p></li>
+<li><p>(起こしていたら)　声をかけたり，強く叩いたりなどして意識を取り戻させる。意識を取り戻してからも，体内の酸素分圧が低いため，安静にさせる。</p></li>
+</ul>
+</section>
+</section>
+<section id="id24">
+<h2>9.5 その他の障害<a class="headerlink" href="#id24" title="Link to this heading">#</a></h2>
+<section id="id25">
+<h3>9.5.1 低体温症(ハイポサーミア)<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<p>体温が生命の危険な状態まで下がる状態のこと。</p>
+<p>重要な臓器がある胴体内部の体温(深層体温)が低下して，発症します。</p>
+<p>体が激しく震え，歯がカチカチなるなどの症状から始まり，次第に思考がぼんやりして反応が鈍くなり，心拍数や呼吸数が低下し，最悪の場合には心停止を起こしてしまいます。</p>
+<p>体温が31度を下回ると死に至る恐れがあります。</p>
+<p>＜主な原因＞</p>
+<ul class="simple">
+<li><p>ジャケットを着ない，チャックが完全に閉めない，というふうに保温対策をおこってないと体温の低下が早まる</p></li>
+<li><p>前日に十分な睡眠をとっていなかったせいで，海に入る前に休息をとっていなかったりすると，体調不良や疲労が原因となり，代謝による発熱が低下する</p></li>
+<li><p>十分な食事をとらないと，発熱のためのカロリーが不足するため，低体温症を引き起こしやすい</p></li>
+</ul>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<ul class="simple">
+<li><p>体温を維持するために，十分な食事をとり，体調には気をつける</p></li>
+<li><p>保温のために，体にフィットしているスーツを着る。冬はフードベストなどでしっかり保温を心がける。</p></li>
+<li><p>寒くなったら無理をせずに，海から上がり，乾いた服に着替える。</p></li>
+<li><p>体温を上げるために，暖かい飲み物を飲む。</p></li>
+<li><p>アルコールを絶対に摂らない</p></li>
+<li><p>コーヒーやお茶をなるべく避ける</p></li>
+<li><p>タバコを吸わない</p></li>
+</ul>
+<p>＜低体温症のときのレスキュー＞</p>
+<ul class="simple">
+<li><p>すぐに海から上がり，スーツなどの濡れたものを脱がせる。その後，太い欠陥があるところを熱すぎないお湯で温め，安静にする。</p></li>
+<li><p>呼吸停止時には，人工呼吸 / 心停止時には心肺蘇生法を行う。</p></li>
+</ul>
+</div>
+</section>
+<section id="id26">
+<h3>9.5.2 日射病・熱射病（オーバーヒート）<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<p>ウェットスーツは体温の保温が主な働きです。そのため，特に夏は陸で着用していると余分な熱を与えてしまい，熱射病（オーバーヒート）を起こす可能性があります。また，炎天下の直射日光の下にいると日射病にかかる可能性もあります。</p>
+<div class="danger admonition">
+<p class="admonition-title">予防と処置</p>
+<ul class="simple">
+<li><p>陸では長時間ウェットスーツを着たままでいない。直射日光をなるべく避ける。暑いと感じたらスーツを脱ぐ・冷水を浴びるなど体温の上昇を避ける</p></li>
+<li><p>バディが熱射病にかかったら風通しの良い日陰で水平に，もしくは足を高くして寝かせる。ただし日射病なら足を低くする。</p></li>
+<li><p>体温が高いときは太い血管が通るところや顎を冷やして体温を下げ，水分をとって安静にする。</p></li>
+</ul>
+</div>
+</section>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id27">
+<h1>禁止事項<a class="headerlink" href="#id27" title="Link to this heading">#</a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>ハイパーベンチレーションをしない</p></li>
+<li><p>無理な息ごらえをしない</p></li>
+<li><p>単独ダイビングをしない（重要禁止事項）</p></li>
+</ul>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="8kagaku.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">8. 潜水の科学</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10log.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">10. ログ</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">9.潜水の生理_figadd / なんかおかしい</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.1. スクイーズ（締め付け）</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.1.1. 耳のスクイーズ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">9.1.2. 鼻のスクイーズ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">9.1.3.鼻血について</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">9.1.4. 肺のスクイーズ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">9.1.5. マスクのスクイーズ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">9.1.6. マスクブロー</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9.2. リバースブロック</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">9.2.1.耳のリバースブロック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">9.2.2. 鼻のリバースブロック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">9.2.3. 歯のリバースブロック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">9.2.4. 胃腸のリバースブロック</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">9.2.5. 肺のリバースブロック(重要)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">＜肺破裂による障害＞</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">1. 空気塞栓症（エア・エンポリズム）</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2. 気胸</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">3. 縦隔(洞)気腫</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">4. 皮下気腫</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">9.3 ハイパーベンチレーション</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">ハイパーベンチレーションがなぜ危険なのか。</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">9.4 シャローウォーターブラックアウト</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">ブラックアウトの前兆</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">ブラックアウトの予防と処置</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">9.5 その他の障害</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">9.5.1 低体温症(ハイポサーミア)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">9.5.2 日射病・熱射病（オーバーヒート）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">禁止事項</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By U.R.D.C.琉大ダイビング部
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
