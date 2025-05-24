@@ -297,6 +297,26 @@ c.f.,[海洋学の科学，熊本大学横瀬教授](http://yrg.sci.kumamoto-u.a
 
 大潮の干潮向かいのときは，特に強いリップカレントが発生します。ポイント・コース取り変更や時間をずらす等の対策をしましょう。
 
+```{figure} figs/ningachi_p49.jpg
+---
+name: fig:ningachi_p49
+width: 600px
+---
+ニンガチカジマーイ
+```
+
+
+### ロングショアカレント
+比較的まっすぐな海岸が続いている場所で，沖からくる波の力によって常に海岸沿いに発生している流れのことです。ポイントとしては，砂辺や奥ビーチなどがあります。
+
+```{figure} figs/Longshore_p49.jpg
+---
+name: fig:Longshore
+width: 300px
+---
+ロングショアカレント
+```
+
 
 `````{admonition} リップカレントと米須
 :class: tip
@@ -325,13 +345,7 @@ width: 600px
 `````
 
 
-```{figure} figs/ningachi_p49.png
----
-name: fig:ningachi_p49
-width: 600px
----
-ニンガチカジマーイ
-```
+
 
 ## 6.3 潮汐
 
