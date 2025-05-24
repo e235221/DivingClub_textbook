@@ -37,8 +37,8 @@
 
 ### 2. リップカレント(離岸流)に対する予防と対処
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -53,14 +53,14 @@
 2. 流れが弱い場合，流れに逆らって泳いで脱出する。
 3. 浅い場合，フィンを脱いで歩いて脱出する。
 4. ウェイトを捨てて，流れがなくなるところまで流されていき，そこから泳いで戻ってくる。（最終手段：どこに流されるか分からない上，そのまま外洋性の流れにつながる可能性もあり，非常に危険）
-</aside>
+`````
 
 ![スクリーンショット 2024-04-25 21.04.18.png](12%20%E3%83%88%E3%83%A9%E3%83%95%E3%82%99%E3%83%AB%E3%81%AE%E4%BA%88%E9%98%B2%E3%81%A8%E5%87%A6%E7%BD%AE(%E4%BD%9C%E6%88%90%E9%80%94%E4%B8%AD)%20572a4aa45ea1451c9a0bb63b24742637/%25E3%2582%25B9%25E3%2582%25AF%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%25B3%25E3%2582%25B7%25E3%2583%25A7%25E3%2583%2583%25E3%2583%2588_2024-04-25_21.04.18.png)
 
 ### 3. ロングジョアカレント(沿岸流)に対する予防と処置
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -70,14 +70,14 @@
 
 - EnとExの場所を変える。(流れに沿ってEnExし陸を歩く)
 - 行きに疲れに逆らってき、帰りに流れに乗る。
-</aside>
+`````
 
 ## 波によるトラブル
 
 ### 1. 高波でExが困難
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防
 
@@ -97,12 +97,12 @@
 （黒潮とは無関係に大波がくることもあるので注意）
 
 - スキューバの際は，レギュレータをくわえたままExする。
-</aside>
+`````
 
 ### 2. 波にのまれた
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -113,7 +113,7 @@
 - 視界確保のため，マスクが流されないように両手で前後を押さえる（鼻から息を吸ってマスクを装着させると外れにくい）
 - 上下左右がわからなくなったら，手足はできるだけ丸めて頭部を守る。
 - 水深の深いところは波がたちにくいので，そういう場所に移動する。
-</aside>
+`````
 
 ## 器材のトラブル
 
@@ -122,8 +122,8 @@
 
 ### 1.マスクが曇ったとき
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -136,12 +136,12 @@
 
 ※新品のレンズを使うときは，中性洗剤を内側に入れて一晩置いておく。
 
-</aside>
+`````
 
 ### 2. マスクに水が入る
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -158,12 +158,12 @@
 
 　※ マスクの位置が上すぎたり、下すぎたりすると水が入りやすいので注意!
 
-</aside>
+`````
 
 ### 3. シュノーケルに水が入る
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -176,12 +176,12 @@
 - シュノーケルクリア(スキン参照)する
 - スキンのときは，シュノーケルを口から離して水を出しても良い。
 - 弁付きのものは，小石などが挟まっていると弁から水が入ってきてしまうためこれを取り除く。(慌てると水が入りやすいので注意)
-</aside>
+`````
 
 ### 4. フィンのストラップが切れたとき
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -192,7 +192,7 @@
 対処：
 
 - 長いほうのストラップをずらして使う。
-</aside>
+`````
 
 ![フィンのトラブル.jpg](12%20%E3%83%88%E3%83%A9%E3%83%95%E3%82%99%E3%83%AB%E3%81%AE%E4%BA%88%E9%98%B2%E3%81%A8%E5%87%A6%E7%BD%AE(%E4%BD%9C%E6%88%90%E9%80%94%E4%B8%AD)%20572a4aa45ea1451c9a0bb63b24742637/%25E3%2583%2595%25E3%2582%25A3%25E3%2583%25B3%25E3%2581%25AE%25E3%2583%2588%25E3%2583%25A9%25E3%2583%2595%25E3%2582%2599%25E3%2583%25AB.jpg)
 
@@ -220,10 +220,9 @@
 
 ※フードをつけると波酔いになりやすいので注意が必要です。
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" />
 
-予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
  予防：
 
@@ -242,20 +241,19 @@
 - 立ち泳ぎをやると酷くなるのでやらない。
 - 吐くことや、泳ぐことで楽になる場合もあるが、酷いようならExする。
 - 波酔いしたら遠慮せずバディに伝える。
-</aside>
+`````
 
 「酔い止めなしなんてひど~い!私ってダイビング無理なの??」 大丈夫です。清に慣れると酔わなくなることもあるので、波酔いに関しては心配しすぎないようにしましょう。そもそもは最高に楽しい場所です。酔いなんて吹き飛んでしまいますよ。それでも酔ってしまったらバディに相談しましょう。
 
 ## 2. 耳が痛くなった，耳抜きができない
 
-<aside>
-❗ 知っておこう
+
+```{tips}
 
 潜水中にうまく耳抜きが行えなかったときに，水圧で鼓膜が内側に圧迫されます。この状態で無理に潜水を続けたり，強く耳抜きすると鼓膜を傷めたり破れたりします。非常に身近で，起こりやすいトラブルです。(潜水の生理参照)
 
 耳は聴覚としての機能だけでなく，平衡感覚の機能も備わっています。大事な器官を失わないようにこれから知識をつけましょう。
-
-</aside>
+```
 
 ### 2-1. 症状
 
@@ -266,8 +264,8 @@
 **「こまめに耳抜きをする!」**これが最大の予防法です。
 つまり、耳抜きができる体調づくりを考えていきましょう。
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防：
+`````{admonition} 予防
+:class: notes
 
 - 疲れや 不足、鼻づまりでも耳抜きがしにくくなるので前日はよく寝る。
 - 潜る前に一度耳抜きを行い、着ってからも耳が痛くなる前にこまめに耳抜きをする。
@@ -276,27 +274,22 @@
 - 海に入る前にチョコや飴、辛いガム、カレー、温かいものを食べると耳が抜けやすくなる。
 - 普段からアゴを動かしたり、ガムを噛んだりして、耳管を鍛えるとよい。
 - 耳が抜けないからといって無理に耳抜きをしない。
-</aside>
+`````
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 対処：
-
+`````{admonition} 対処
+:class: notes
 - 痛みを感じなくなる水まで戻り、もう一度耳抜きをする。
 - 耳管が聞くように、唾や水分を取ると痛みが和らく。
 - バディに耳が抜けないことを知らせる。
 - Ex しても耳が痛むようであれば耳鼻科へ行く。
 - 鼓膜が破れたら速やかにEx して病院に行く。
 - 片方だけ抜けないときは抜けない方の耳を上にして抜いてみる。
-</aside>
-
-<aside>
-❗ 強調！！
-
+`````
+`````{important} 
 耳抜きには個人差があり、慣れてくると出来るようになることもあります。しかし、できなくても焦る必要はありません。心配しすぎないようにしましょう。
 
 普段耳抜きができる人でもストレスなどで急に耳抜きができなくなることがあります。つまり、何度も繰り返しますが、個人差はあるものの，全てのダイバーが気を付けなければならないトラブルの一つです。
-
-</aside>
+`````
 
 ## 3. 鼻血が出たとき
 
@@ -306,8 +299,8 @@
 
 ### 3-2. 予防と対処
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -318,7 +311,7 @@
 
 - 気づいたら鼻血が出ていたということがあるので、焦らず落ち着く。
 - 鼻をかまないようにし、自然に止まるまで安静にする。すぐに止まらなければEx し、痛みが残るようなら病院に行く。
-</aside>
+`````
 
 ## 4. 寒くなったとき
 
@@ -331,8 +324,8 @@
 
 ### 4-2. 予防と対処
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -348,7 +341,7 @@
 - 体を動かして体温を上げる。
 - 震えが止まらない時はすぐにExする。その後速やかに着替えて温かいものをとる。冬場は温かい飲み物・(アルコールはダメ)を用意しておくとよい。
 ※ 活動のときは各商法瓶を用意した方がよい。
-</aside>
+`````
 
 ## 5. 筋肉が攣った
 
@@ -358,8 +351,8 @@
 
 ### 5-2. 予防と対処
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -382,7 +375,7 @@
 - 足の物のときはブーツを説いで体ばす。
 - 沿っても安前にする。
 - ひどいときはEx する。助けないようであれば、バディが値まで違れて行 ってくれるため心をはいらない。しかし、バディに依存してはいけない。 ・バナナ(カリウム)や楽理のスポーツ飲料、塩分などをとると国復しやす い。冷えたスポーツ飲料しかない場合は、口に含んで温めてから飲むとよい。
-</aside>
+`````
 
 ## 6. 疲れている
 
@@ -392,8 +385,8 @@
 
 ### 6-2. 予防と対処
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -407,16 +400,15 @@
     
     （バディの判断であっても，それに従う。）
     
-</aside>
+`````
 
 # C. 水中拘束
 
-<aside>
-🪢 水中拘束とは
-
+`````{admonition} 水中拘束とは
+:class: notes
 水中でなんらかの障害により，身動きができないことをいう。大変危険な状況である。
 
-</aside>
+`````
 
 ⇒ ナイフを使用して水中拘束を解く。
 
@@ -428,8 +420,8 @@
 
 ### C-1.1 予防と対処
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防：
 
@@ -451,7 +443,7 @@
 
 ※水中拘束に遭うと，自分の見える範囲が狭くなり，身動きも自由に取れなくなることがあるので，バディに解いてもらうと良い。
 
-</aside>
+`````
 
 ![ナイフの使い方.JPG](12%20%E3%83%88%E3%83%A9%E3%83%95%E3%82%99%E3%83%AB%E3%81%AE%E4%BA%88%E9%98%B2%E3%81%A8%E5%87%A6%E7%BD%AE(%E4%BD%9C%E6%88%90%E9%80%94%E4%B8%AD)%20572a4aa45ea1451c9a0bb63b24742637/%25E3%2583%258A%25E3%2582%25A4%25E3%2583%2595%25E3%2581%25AE%25E4%25BD%25BF%25E3%2581%2584%25E6%2596%25B9.jpg)
 
@@ -461,8 +453,8 @@
 
 ### C-2.1. 予防と対処
 
-<aside>
-<img src="https://www.notion.so/icons/pill_red.svg" alt="https://www.notion.so/icons/pill_red.svg" width="40px" /> 予防と対処
+`````{admonition} 予防と対処
+:class: notes
 
 予防；
 
@@ -481,7 +473,7 @@
 - 機材に引っかかった場合は，器材を捨てる。
 
 - （スキューバ時）BCにエアーを入れたり抜いたりして体勢を整える。
-</aside>
+`````
 
 ## C-1.3.　その他のナイフの使い方
 
